@@ -160,6 +160,9 @@ body {
 }
 
 .banner-phone {
+    
+    .make-sm-column(3);     // 768px (min)
+    
     margin-top: -12px;
     .phone-icon {
         margin: 0 10px 0 0;
@@ -174,12 +177,20 @@ body {
 }
 
 .banner-message {
+    
+    .make-sm-column(9);     // 768px (min)
+    .make-md-column(5);     // 992px (min)
+    
     text-transform: uppercase;
     text-align: center;
     font-size: 16px;
 }
 
 .banner-right {
+    
+    // hidden-sm in html until i can write the mixin
+    .make-md-column(4);     // 992px (min)
+    
     margin-top: -9px;
     
     .chat {
@@ -243,6 +254,11 @@ body {
     margin-top: 8px;
 }
 
+.subnav-elements {
+    .make-xs-column(12);     // 768px (min)
+    .make-sm-column(6);     // 768px (min)
+}
+
 .subnav-left {
     float: left;
     margin-top: 8px;
@@ -291,6 +307,10 @@ body {
 }
 
 .search-wrapper {
+    
+    .make-sm-column(6);     // 768px (min)
+    .make-md-column(3);     // 992px (min)
+    
     margin-top: 7px;
 }
 
@@ -304,8 +324,11 @@ body {
 	}
 }
 // end server side generated
-
+// todo-bh: last make col conversion
 .subnav-wrapper {
+    
+    .make-md-column(3);     // 992px (min)
+    
     height: 30px;
     color: @white;
 }
@@ -537,6 +560,10 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 // End Carousel
 
 .wrapper-category {
+    .element {
+        .make-sm-column(4);     // 768px (min)
+    }
+    
     margin-bottom: 40px;
 }
 
@@ -598,6 +625,22 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
 /* Best Seller Section
 ========================================================================== */
+
+.product-slider-title {
+    .make-sm-column(9);     // 768px (min)
+}
+
+.product-slider-chevrons {
+    .make-sm-column(3);     // 768px (min)
+}
+
+.carousel-inner.best-sellers {
+    .make-md-column(12);     // 992px (min)
+    
+    .element {
+        .make-sm-column(3);     // 768px (min)
+    }
+}
 
 .product-image-bg {
     width: 90%;
@@ -772,6 +815,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 //End Product Slider
 
 .prod-plp {
+    .make-md-column(12);     // 992px (min)
     
     @media (min-width: @screen-tablet) {
         margin-left: -15px;
@@ -792,6 +836,10 @@ popular-items {
 }
 
 .item-wrapper {
+    
+    .make-xs-column(12);     // 768px (min)
+    .make-sm-column(3);     // 768px (min)
+    
     .item {
         border: 1px dotted @light-gray1;
         margin-bottom: 50px;
