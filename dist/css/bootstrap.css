@@ -6878,16 +6878,12 @@ body {
   width: 100%;
   height: 50px;
   margin: -5px 0 0 0;
-  background-color: #7fb155;
+  background-color: #9dce73;
+  border-bottom: 1px dashed #d3d3d3;
 }
 @media (max-width: 768px) {
   .bg-banner {
     display: none;
-  }
-}
-@media (min-width: 768px) {
-  .bg-banner {
-    text-shadow: 1px, 1px, 10px, #aaa;
   }
 }
 .wrapper-banner {
@@ -6901,6 +6897,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 8px;
+  text-shadow: 1px 1px 1px #b5b5b5;
 }
 @media (min-width: 768px) {
   .banner-phone {
@@ -6923,7 +6920,7 @@ body {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: -4px;
+  margin-top: 15px;
 }
 @media (min-width: 768px) {
   .banner-message {
@@ -6938,17 +6935,18 @@ body {
   }
 }
 .banner-message span {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 800;
   color: #444f45;
   text-align: center;
+  text-shadow: 1px 1px 1px #b5b5b5;
 }
 .banner-message span:nth-child(2) {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: lowercase;
 }
 .banner-message span:nth-child(3) {
-  font-size: 40px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 .banner-right {
@@ -6986,10 +6984,10 @@ body {
 }
 .wrapper-subnav .subnavall {
   height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7fb155), to(#b4d19b));
-  background: -webkit-linear-gradient(top, #7fb155, #b4d19b);
-  background:      -o-linear-gradient(top, #7fb155, #b4d19b);
-  background-color: #7fb155;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9dce73), to(#b7db99));
+  background: -webkit-linear-gradient(top, #9dce73, #b7db99);
+  background:      -o-linear-gradient(top, #9dce73, #b7db99);
+  background-color: #9dce73;
 }
 .logo {
   float: left;
@@ -7011,17 +7009,36 @@ body {
 }
 .subnav-left {
   float: left;
+  margin-top: 9px;
   margin-left: 5px;
 }
+@media (min-width: 480px) {
+  .subnav-left {
+    margin-top: 0;
+  }
+}
 .subnav-left span:first-of-type {
-  font-size: 40px;
+  font-family: 'Nunito Sans', sans-serif !important;
+  font-size: 30px;
   font-weight: 800;
   color: #444f45;
-  letter-spacing: 5px;
+  text-shadow: 1px 1px 1px #b5b5b5;
+}
+@media (min-width: 480px) {
+  .subnav-left span:first-of-type {
+    font-size: 40px;
+  }
 }
 .subnav-left span:last-of-type {
-  font-size: 30px;
+  font-family: 'Quicksand', sans-serif !important;
+  font-size: 20px;
   font-weight: 400;
+  text-shadow: 1px 1px 1px #b5b5b5;
+}
+@media (min-width: 480px) {
+  .subnav-left span:last-of-type {
+    font-size: 40px;
+  }
 }
 .subnav-left a:link {
   color: #fff;
@@ -7130,16 +7147,18 @@ body {
   background-color: #444f45;
 }
 .main-nav li:hover {
-  background-color: #a6c989;
+  background-color: #444f45;
 }
 .main-nav li:hover a {
-  color: #444f45 !important;
+  color: #fff;
+  border-right: 1px dashed #7b7a7a;
+  border-left: 1px dashed #7b7a7a;
 }
 .main-nav li a {
   color: #fff !important;
 }
 #myNavbar ul li {
-  font-family: "Myriad Pro", Verdana, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }

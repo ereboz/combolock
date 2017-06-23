@@ -27,6 +27,10 @@ Custom iphone widths if needed:
 @font-secondary: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
 @font-src-sans: "Source Sans Pro", sans-serif;
 @font-montserrat: 'Montserrat', arial, sans-serif;	// unused but nice
+
+@font-nunito: 'Nunito Sans', sans-serif;
+@font-quicksand: 'Quicksand', sans-serif;
+
 @gray-background: #f5f7f9;
 @white: #fff;
 @white-off: fbfbfb;
@@ -35,8 +39,9 @@ Custom iphone widths if needed:
 @black: #000;
 @white: #fff;
 
-// combolock colors
-@green: #7fb155;
+// combolock colors (banner)
+@green: #7fb155;        // old
+@green: #9dce73;
 @gray-light: #d3d3d3;
 @slate-gray: #444f45;
 
@@ -149,7 +154,9 @@ Custom iphone widths if needed:
     height: @height;
 }
 
-
+.text-shadow(@offset-x:1px, @offset-y:1px, @blur-radius:1px, @color:#b5b5b5) {
+    text-shadow:@offset-x @offset-y @blur-radius @color;
+}
 
 /* PAGE OVERRIDES
 ========================================================================== */
@@ -175,14 +182,11 @@ body {
     height: 50px;
     margin: -5px 0 0 0;
     background-color: @green;
+    border-bottom: 1px dashed @light-gray4;
     
     
     @media (max-width: @screen-tablet) {
         display: none;
-    }
-    
-    @media (min-width: @screen-tablet) {
-        text-shadow: 1px, 1px, 10px, #aaa;
     }
 }
 
@@ -194,7 +198,7 @@ body {
 }
 
 .banner-phone {
-    
+    .text-shadow();
     .make-sm-column(3);     // 768px (min)
     
     margin-top: 8px;
@@ -214,22 +218,23 @@ body {
     .make-sm-column(9);     // 768px (min)
     .make-md-column(5);     // 992px (min)
     
-    margin-top: -4px;
+    margin-top: 15px;
     
     span {
-        font-size: 40px;
+        font-size: 20px;
         text-align: center;
         font-weight: 800;
         color: @slate-gray;
+        .text-shadow();
     }
     
     span:nth-child(2) {
-        font-size: 18px;
+        font-size: 16px;
         text-transform: lowercase;
     }
     
     span:nth-child(3) {
-        font-size: 40px;
+        font-size: 20px;
         text-transform: uppercase;
     }
 }
@@ -295,7 +300,7 @@ body {
         height: 50px;
         //background-color: @green;
         //.opacity(0.8);
-        .gradient(@green, lighten(@green, 20%));
+        .gradient(@green, lighten(@green, 10%));
     }
 }
 
@@ -312,20 +317,35 @@ body {
 .subnav-left {
     float: left;
     margin-left: 5px;
+    margin-top: 9px;
+    
+    @media (min-width: @screen-phone) {
+        margin-top: 0;
+    }
     
 	
 	span:first-of-type {
-        font-size: 40px;
+        font-size: 30px;
 		font-weight: 800;
-        //font-family: @font-roboto !important;
+        font-family: @font-nunito !important;
         color: @slate-gray;
-        letter-spacing: 5px;
+        .text-shadow();
+        
+        @media (min-width: @screen-phone) {
+            font-size: 40px;
+        }
         
 	}
 	
 	span:last-of-type {
-        font-size: 30px;
+        font-size: 20px;
 		font-weight: 400;
+        font-family: @font-quicksand !important;
+        .text-shadow();
+        
+        @media (min-width: @screen-phone) {
+            font-size: 40px;
+        }
 	}
 
 		a {
@@ -435,25 +455,44 @@ body {
     background-color: @slate-gray;
     margin-left: -15px;
     margin-right: -15px;
-
+    
+    
+    //li {
+    //    &:hover {
+		//	background-color: lighten(@green, 15%);
+    //
+		//	a {
+		//		color: @slate-gray !important;
+    //        }
+    //    }
+    //
+    //    a {
+    //        color: @white !important;
+    //    }
+    //}
+    
     li {
         &:hover {
-			background-color: lighten(@green, 15%);
-
-			a {
-				color: @slate-gray !important;
+            background-color: @slate-gray;
+            
+            a {
+                color: @white;
+                border-left: 1px dashed @gray-medium;
+                border-right: 1px dashed @gray-medium;
             }
         }
         
         a {
             color: @white !important;
+            //border: 1px dashed gray;
         }
     }
+    
 }
 
 #myNavbar {
     ul li {
-        font-family: @font-nav;
+        font-family: @font-quicksand;
         font-weight: 300;
         text-transform: uppercase;
     }
