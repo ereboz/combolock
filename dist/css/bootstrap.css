@@ -6811,7 +6811,7 @@ body {
   width: 100%;
   height: 50px;
   margin: -5px 0 0 0;
-  background-color: #29abe2;
+  background-color: #7fb155;
 }
 @media (max-width: 768px) {
   .bg-banner {
@@ -6819,7 +6819,6 @@ body {
   }
 }
 .wrapper-banner {
-  margin: 20px 0;
   font-family: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
   font-size: 12px;
   color: #fff;
@@ -6829,7 +6828,7 @@ body {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: -12px;
+  margin-top: 8px;
 }
 @media (min-width: 768px) {
   .banner-phone {
@@ -6852,9 +6851,7 @@ body {
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
+  margin-top: -4px;
 }
 @media (min-width: 768px) {
   .banner-message {
@@ -6868,12 +6865,26 @@ body {
     width: 41.66666667%;
   }
 }
+.banner-message span {
+  font-size: 40px;
+  font-weight: 800;
+  color: #444f45;
+  text-align: center;
+}
+.banner-message span:nth-child(2) {
+  font-size: 18px;
+  text-transform: lowercase;
+}
+.banner-message span:nth-child(3) {
+  font-size: 40px;
+  text-transform: uppercase;
+}
 .banner-right {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: -9px;
+  margin-top: 10px;
 }
 @media (min-width: 992px) {
   .banner-right {
@@ -6903,7 +6914,7 @@ body {
 }
 .wrapper-subnav .subnavall {
   height: 50px;
-  background-color: #000;
+  background-color: #7fb155;
 }
 .logo {
   float: left;
@@ -7048,12 +7059,15 @@ body {
   margin-right: -15px;
   margin-bottom: 0;
   margin-left: -15px;
-  background-color: #f5f7f9;
+  background-color: #444f45;
 }
 .main-nav li:hover {
-  background-color: #29abe2;
+  background-color: #a6c989;
 }
 .main-nav li:hover a {
+  color: #444f45 !important;
+}
+.main-nav li a {
   color: #fff !important;
 }
 #myNavbar ul li {
