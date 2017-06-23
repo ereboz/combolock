@@ -37,6 +37,7 @@ Custom iphone widths if needed:
 
 // combolock colors
 @green: #7fb155;
+@gray-light: #d3d3d3;
 @slate-gray: #444f45;
 
 
@@ -127,6 +128,29 @@ Custom iphone widths if needed:
     opacity: 		    @opacity;
 }
 
+.gradient (@startColor: #eee, @endColor: #fff) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.box-shadow (@arguments) {
+    -moz-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+
+
 /* PAGE OVERRIDES
 ========================================================================== */
 
@@ -152,8 +176,13 @@ body {
     margin: -5px 0 0 0;
     background-color: @green;
     
+    
     @media (max-width: @screen-tablet) {
         display: none;
+    }
+    
+    @media (min-width: @screen-tablet) {
+        text-shadow: 1px, 1px, 10px, #aaa;
     }
 }
 
@@ -262,15 +291,17 @@ body {
     //padding-top: 20px;
 
     .subnavall {
-        //margin-bottom: 40px;
-        background-color: @green;
+        //margin-bottom: 40px;      not used
         height: 50px;
+        //background-color: @green;
+        //.opacity(0.8);
+        .gradient(@green, lighten(@green, 20%));
     }
 }
 
 .logo {
     float: left;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .subnav-elements {
@@ -280,24 +311,21 @@ body {
 
 .subnav-left {
     float: left;
-    margin-top: 8px;
-    font-family: @font-roboto !important;
-    font-size: 24px;
     margin-left: 5px;
-    text-transform: uppercase;
-    color: @white;
-
-    @media (min-width: @screen-sm-min) {
-        font-size: 24px;
-    }
+    
 	
 	span:first-of-type {
-		margin-right: -6px;
-		font-weight: 300;
+        font-size: 40px;
+		font-weight: 800;
+        //font-family: @font-roboto !important;
+        color: @slate-gray;
+        letter-spacing: 5px;
+        
 	}
 	
 	span:last-of-type {
-		font-weight: 700;
+        font-size: 30px;
+		font-weight: 400;
 	}
 
 		a {
@@ -306,7 +334,7 @@ body {
 				text-decoration: none;
 			}
 			&:hover {
-				color: @gray-medium;
+				color: @slate-gray;
 			}
 			&:visited {
 				color: @white;
@@ -315,6 +343,7 @@ body {
 				color: @white;
 			}
 		}
+    
     .logo-vendors {
         float: right;
         margin-left: 30px;
@@ -322,6 +351,10 @@ body {
         img {
             float: left;
         }
+    }
+    
+    .home {
+    
     }
 }
 
@@ -348,8 +381,9 @@ body {
     
     .make-md-column(3);     // 992px (min)
     
-    height: 30px;
+    margin-top: 20px;
     color: @white;
+    //height: 30px;
 }
 
 .sub-nav {
@@ -593,6 +627,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 .category {
     border: 1px solid @light-gray1;
     margin: 5px auto;
+    .box-shadow(2px 2px 5px @gray-light);
 
     @media (max-width: @screen-xs) {
         width: 65%;
