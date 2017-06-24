@@ -1,25 +1,48 @@
 //* Created by javaBoxer on 3/23/2017.
 
 
-/* ==========================================================================
-Section:
-// Bootstrap LESS variables to reference
-// @screen-xs             480px;
-// @screen-tablet         768px
-// @screen-desktop        992px
-// @screen-lg-desktop     1200px
-
-Custom iphone widths if needed:
-// @screen-xxxs          320px
-// @screen-xxs           375px
+/* Developer Notes
 ========================================================================== */
+
+//<editor-fold desc="Developer Notes">
+/* ==========================================================================
+Bootstrap LESS variables to reference
+
+@screen-xxxs          320px
+@screen-xxs           375px
+@screen-xs             480px;
+@screen-tablet         768px
+@screen-desktop        992px
+@screen-lg-desktop     1200px
+Custom iphone widths if needed:
+
+.make-xs-column = @screen-xs     =  480px;
+.make-sm-column = @screen-sm-min = 768px;
+.make-md-column = @screen-md-min = 992px;
+.make-lg-column = @screen-lg-min = 1200px;
+
+Custom variables to make using column mixin's possible and keep the DOM
+unpolluted with (col-md-4 col-lg-6, etc.)
+
+@phone-min: ~"(min-width: 480px)";
+@tablet-min: ~"(min-width: 768px)";
+@desktop-min: ~"(min-width: 992px)";
+@desktop-large-min: ~"(min-width: 1200px)";
+
+@phone-max: ~"(max-width: 480px)";
+@tablet-max: ~"(max-width: 768px)";
+@desktop-max: ~"(max-width: 992px)";
+@desktop-large-max: ~"(max-width: 1200px)";
+========================================================================== */
+
+//</editor-fold>
 
 
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
 
 
-/* DEFINE OUR GLOBAL VARIABLES FOR KEYEDALIKE
+/* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
 @font-subnav: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
 @font-nav: "Myriad Pro", Verdana, sans-serif;
@@ -43,7 +66,8 @@ Custom iphone widths if needed:
 @green: #7fb155;        // old
 @green: #9dce73;
 @gray-light: #d3d3d3;
-@slate-gray: #444f45;
+@slate-gray: #444f45;  // not used
+@gray-dark: #7b7b7b;
 
 
 @carousel-strip: #eff8fa;
@@ -74,6 +98,19 @@ Custom iphone widths if needed:
 @screen-xxs: 375px;
 @screen-tablet-md-min: 780px;
 @screen-tablet-md-max: 800px;
+
+// Custom Grid Variables
+
+@phone-min: ~"(min-width: 480px)";
+@tablet-min: ~"(min-width: 768px)";
+@desktop-min: ~"(min-width: 992px)";
+@desktop-large-min: ~"(min-width: 1200px)";
+
+@phone-max: ~"(max-width: 480px)";
+@tablet-max: ~"(max-width: 768px)";
+@desktop-max: ~"(max-width: 992px)";
+@desktop-large-max: ~"(max-width: 1200px)";
+
 
 /* MIXIN'S
 ========================================================================== */
@@ -307,6 +344,18 @@ body {
 .logo {
     float: left;
     margin-top: 10px;
+    
+    span.fa.fa-lock {
+        font-size: 40px;
+        margin-right: 10px;
+        color: #fff;
+        
+        @media (min-width: @screen-phone) {
+            font-size: 37px;
+            margin-right: 10px;
+        }
+    }
+    
 }
 
 .subnav-elements {
@@ -332,19 +381,20 @@ body {
         .text-shadow();
         
         @media (min-width: @screen-phone) {
-            font-size: 40px;
+            font-size: 38px;
         }
         
 	}
 	
 	span:last-of-type {
-        font-size: 20px;
+        margin-right: 5px;
+        font-size: 25px;
 		font-weight: 400;
         font-family: @font-quicksand !important;
         .text-shadow();
         
         @media (min-width: @screen-phone) {
-            font-size: 40px;
+            font-size: 33px;
         }
 	}
 
@@ -452,45 +502,33 @@ body {
 
 .main-nav {
     margin-bottom: 0;
-    background-color: @slate-gray;
+    background-color: @gray-dark;
     margin-left: -15px;
     margin-right: -15px;
     
-    
-    //li {
-    //    &:hover {
-		//	background-color: lighten(@green, 15%);
-    //
-		//	a {
-		//		color: @slate-gray !important;
-    //        }
-    //    }
-    //
-    //    a {
-    //        color: @white !important;
-    //    }
-    //}
-    
     li {
         &:hover {
-            background-color: @slate-gray;
+            background-color: @gray-dark;
             
             a {
                 color: @white;
-                border-left: 1px dashed @gray-medium;
-                border-right: 1px dashed @gray-medium;
+                border-left: 1px dashed @white;
+                border-right: 1px dashed @white;
             }
         }
         
         a {
             color: @white !important;
-            //border: 1px dashed gray;
         }
     }
     
 }
 
 #myNavbar {
+    // *** float nav bar left
+    float: left;
+    clear: left;
+    
     ul li {
         font-family: @font-quicksand;
         font-weight: 300;
