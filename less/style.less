@@ -1,25 +1,48 @@
 //* Created by javaBoxer on 3/23/2017.
 
 
-/* ==========================================================================
-Section:
-// Bootstrap LESS variables to reference
-// @screen-xs             480px;
-// @screen-tablet         768px
-// @screen-desktop        992px
-// @screen-lg-desktop     1200px
-
-Custom iphone widths if needed:
-// @screen-xxxs          320px
-// @screen-xxs           375px
+/* Developer Notes
 ========================================================================== */
+
+//<editor-fold desc="Developer Notes">
+/* ==========================================================================
+Bootstrap LESS variables to reference
+
+@screen-xxxs          320px
+@screen-xxs           375px
+@screen-xs             480px;
+@screen-tablet         768px
+@screen-desktop        992px
+@screen-lg-desktop     1200px
+Custom iphone widths if needed:
+
+.make-xs-column = @screen-xs     =  480px;
+.make-sm-column = @screen-sm-min = 768px;
+.make-md-column = @screen-md-min = 992px;
+.make-lg-column = @screen-lg-min = 1200px;
+
+Custom variables to make using column mixin's possible and keep the DOM
+unpolluted with (col-md-4 col-lg-6, etc.)
+
+@phone-min: ~"(min-width: 480px)";
+@tablet-min: ~"(min-width: 768px)";
+@desktop-min: ~"(min-width: 992px)";
+@desktop-large-min: ~"(min-width: 1200px)";
+
+@phone-max: ~"(max-width: 480px)";
+@tablet-max: ~"(max-width: 768px)";
+@desktop-max: ~"(max-width: 992px)";
+@desktop-large-max: ~"(max-width: 1200px)";
+========================================================================== */
+
+//</editor-fold>
 
 
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
 
 
-/* DEFINE OUR GLOBAL VARIABLES FOR KEYEDALIKE
+/* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
 @font-subnav: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
 @font-nav: "Myriad Pro", Verdana, sans-serif;
@@ -27,6 +50,10 @@ Custom iphone widths if needed:
 @font-secondary: "Bitter Regular", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
 @font-src-sans: "Source Sans Pro", sans-serif;
 @font-montserrat: 'Montserrat', arial, sans-serif;	// unused but nice
+
+@font-nunito: 'Nunito Sans', sans-serif;
+@font-quicksand: 'Quicksand', sans-serif;
+
 @gray-background: #f5f7f9;
 @white: #fff;
 @white-off: fbfbfb;
@@ -34,7 +61,15 @@ Custom iphone widths if needed:
 @bg-hover-blue: #78c4cd;
 @black: #000;
 @white: #fff;
-@green: #47a9b4;
+
+// combolock colors (banner)
+@green: #7fb155;        // old
+@green: #9dce73;
+@gray-light: #d3d3d3;
+@slate-gray: #444f45;  // not used
+@gray-dark: #7b7b7b;
+
+
 @carousel-strip: #eff8fa;
 @light-gray1: #e0e0e0;
 @light-gray4: #dddddd;
@@ -63,6 +98,19 @@ Custom iphone widths if needed:
 @screen-xxs: 375px;
 @screen-tablet-md-min: 780px;
 @screen-tablet-md-max: 800px;
+
+// Custom Grid Variables
+
+@phone-min: ~"(min-width: 480px)";
+@tablet-min: ~"(min-width: 768px)";
+@desktop-min: ~"(min-width: 992px)";
+@desktop-large-min: ~"(min-width: 1200px)";
+
+@phone-max: ~"(max-width: 480px)";
+@tablet-max: ~"(max-width: 768px)";
+@desktop-max: ~"(max-width: 992px)";
+@desktop-large-max: ~"(max-width: 1200px)";
+
 
 /* MIXIN'S
 ========================================================================== */
@@ -122,6 +170,31 @@ Custom iphone widths if needed:
     opacity: 		    @opacity;
 }
 
+.gradient (@startColor: #eee, @endColor: #fff) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.box-shadow (@arguments) {
+    -moz-box-shadow: @arguments;
+    -ms-box-shadow: @arguments;
+    -o-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.text-shadow(@offset-x:1px, @offset-y:1px, @blur-radius:1px, @color:#b5b5b5) {
+    text-shadow:@offset-x @offset-y @blur-radius @color;
+}
+
 /* PAGE OVERRIDES
 ========================================================================== */
 
@@ -145,7 +218,9 @@ body {
     width: 100%;
     height: 50px;
     margin: -5px 0 0 0;
-    background-color: @blue;
+    background-color: @green;
+    border-bottom: 1px dashed @light-gray4;
+    
     
     @media (max-width: @screen-tablet) {
         display: none;
@@ -153,17 +228,17 @@ body {
 }
 
 .wrapper-banner {
-    margin: 20px 0;
+    //margin: 20px 0;                 // temp remove
     font-family: @font-subnav;
     font-size: 12px;
     color: @white;
 }
 
 .banner-phone {
-    
+    .text-shadow();
     .make-sm-column(3);     // 768px (min)
     
-    margin-top: -12px;
+    margin-top: 8px;
     .phone-icon {
         margin: 0 10px 0 0;
     }
@@ -177,13 +252,28 @@ body {
 }
 
 .banner-message {
-    
     .make-sm-column(9);     // 768px (min)
     .make-md-column(5);     // 992px (min)
     
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 16px;
+    margin-top: 15px;
+    
+    span {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 800;
+        color: @slate-gray;
+        .text-shadow();
+    }
+    
+    span:nth-child(2) {
+        font-size: 16px;
+        text-transform: lowercase;
+    }
+    
+    span:nth-child(3) {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
 }
 
 .banner-right {
@@ -191,7 +281,7 @@ body {
     // hidden-sm in html until i can write the mixin
     .make-md-column(4);     // 992px (min)
     
-    margin-top: -9px;
+    margin-top: 10px;
     
     .chat {
         float: left;
@@ -243,15 +333,29 @@ body {
     //padding-top: 20px;
 
     .subnavall {
-        //margin-bottom: 40px;
-        background-color: @black;
+        //margin-bottom: 40px;      not used
         height: 50px;
+        //background-color: @green;
+        //.opacity(0.8);
+        .gradient(@green, lighten(@green, 10%));
     }
 }
 
 .logo {
     float: left;
-    margin-top: 8px;
+    margin-top: 10px;
+    
+    span.fa.fa-lock {
+        font-size: 40px;
+        margin-right: 10px;
+        color: #fff;
+        
+        @media (min-width: @screen-phone) {
+            font-size: 37px;
+            margin-right: 10px;
+        }
+    }
+    
 }
 
 .subnav-elements {
@@ -261,24 +365,37 @@ body {
 
 .subnav-left {
     float: left;
-    margin-top: 8px;
-    font-family: @font-roboto !important;
-    font-size: 24px;
     margin-left: 5px;
-    text-transform: uppercase;
-    color: @white;
-
-    @media (min-width: @screen-sm-min) {
-        font-size: 24px;
+    margin-top: 9px;
+    
+    @media (min-width: @screen-phone) {
+        margin-top: 0;
     }
+    
 	
 	span:first-of-type {
-		margin-right: -6px;
-		font-weight: 300;
+        font-size: 30px;
+		font-weight: 800;
+        font-family: @font-nunito !important;
+        color: @slate-gray;
+        .text-shadow();
+        
+        @media (min-width: @screen-phone) {
+            font-size: 38px;
+        }
+        
 	}
 	
 	span:last-of-type {
-		font-weight: 700;
+        margin-right: 5px;
+        font-size: 25px;
+		font-weight: 400;
+        font-family: @font-quicksand !important;
+        .text-shadow();
+        
+        @media (min-width: @screen-phone) {
+            font-size: 33px;
+        }
 	}
 
 		a {
@@ -287,7 +404,7 @@ body {
 				text-decoration: none;
 			}
 			&:hover {
-				color: @gray-medium;
+				color: @slate-gray;
 			}
 			&:visited {
 				color: @white;
@@ -296,6 +413,7 @@ body {
 				color: @white;
 			}
 		}
+    
     .logo-vendors {
         float: right;
         margin-left: 30px;
@@ -303,6 +421,10 @@ body {
         img {
             float: left;
         }
+    }
+    
+    .home {
+    
     }
 }
 
@@ -329,8 +451,9 @@ body {
     
     .make-md-column(3);     // 992px (min)
     
-    height: 30px;
+    margin-top: 20px;
     color: @white;
+    //height: 30px;
 }
 
 .sub-nav {
@@ -379,24 +502,35 @@ body {
 
 .main-nav {
     margin-bottom: 0;
-    background-color: @bg-light-gray;
+    background-color: @gray-dark;
     margin-left: -15px;
     margin-right: -15px;
-
+    
     li {
         &:hover {
-			background-color: @blue;
-
-			a {
-				color: @white !important;
+            background-color: @gray-dark;
+            
+            a {
+                color: @white;
+                border-left: 1px dashed @white;
+                border-right: 1px dashed @white;
             }
         }
+        
+        a {
+            color: @white !important;
+        }
     }
+    
 }
 
 #myNavbar {
+    // *** float nav bar left
+    float: left;
+    clear: left;
+    
     ul li {
-        font-family: @font-nav;
+        font-family: @font-quicksand;
         font-weight: 300;
         text-transform: uppercase;
     }
@@ -570,6 +704,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 .category {
     border: 1px solid @light-gray1;
     margin: 5px auto;
+    .box-shadow(2px 2px 5px @gray-light);
 
     @media (max-width: @screen-xs) {
         width: 65%;
