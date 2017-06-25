@@ -6847,17 +6847,36 @@ button.close {
     display: none !important;
   }
 }
+/* Developer Notes
+========================================================================== */
 /* ==========================================================================
-Section:
-// Bootstrap LESS variables to reference
-// @screen-xs             480px;
-// @screen-tablet         768px
-// @screen-desktop        992px
-// @screen-lg-desktop     1200px
+Bootstrap LESS variables to reference
 
+@screen-xxxs          320px
+@screen-xxs           375px
+@screen-xs             480px;
+@screen-tablet         768px
+@screen-desktop        992px
+@screen-lg-desktop     1200px
 Custom iphone widths if needed:
-// @screen-xxxs          320px
-// @screen-xxs           375px
+
+.make-xs-column = @screen-xs     =  480px;
+.make-sm-column = @screen-sm-min = 768px;
+.make-md-column = @screen-md-min = 992px;
+.make-lg-column = @screen-lg-min = 1200px;
+
+Custom variables to make using column mixin's possible and keep the DOM
+unpolluted with (col-md-4 col-lg-6, etc.)
+
+@phone-min: ~"(min-width: 480px)";
+@tablet-min: ~"(min-width: 768px)";
+@desktop-min: ~"(min-width: 992px)";
+@desktop-large-min: ~"(min-width: 1200px)";
+
+@phone-max: ~"(max-width: 480px)";
+@tablet-max: ~"(max-width: 768px)";
+@desktop-max: ~"(max-width: 992px)";
+@desktop-large-max: ~"(max-width: 1200px)";
 ========================================================================== */
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
@@ -7358,6 +7377,8 @@ span.glyphicon.glyphicon-chevron-left {
 }
 .product-wrapper {
   background: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
 }

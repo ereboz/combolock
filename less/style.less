@@ -170,13 +170,22 @@ unpolluted with (col-md-4 col-lg-6, etc.)
     opacity: 		    @opacity;
 }
 
-.gradient (@startColor: #eee, @endColor: #fff) {
+.gradient1 (@startColor: #eee, @endColor: #fff) {
     background-color: @startColor;
     background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
     background: -webkit-linear-gradient(top, @startColor, @endColor);
     background: -moz-linear-gradient(top, @startColor, @endColor);
     background: -ms-linear-gradient(top, @startColor, @endColor);
     background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+.gradient2 (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
 }
 
 .box-shadow (@arguments) {
@@ -194,6 +203,20 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 .text-shadow(@offset-x:1px, @offset-y:1px, @blur-radius:1px, @color:#b5b5b5) {
     text-shadow:@offset-x @offset-y @blur-radius @color;
 }
+
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+
+
+
 
 /* PAGE OVERRIDES
 ========================================================================== */
@@ -337,7 +360,7 @@ body {
         height: 50px;
         //background-color: @green;
         //.opacity(0.8);
-        .gradient(@green, lighten(@green, 10%));
+        .gradient1(@green, lighten(@green, 10%));
     }
 }
 
@@ -735,7 +758,8 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 // Product Slider - product (slides)
 .product-wrapper {
     border: 1px solid @light-gray1;
-    border-radius: 5px;
+    //border-radius: 5px;
+    .border-radius();
     background: @white;
 
     &.listing {
