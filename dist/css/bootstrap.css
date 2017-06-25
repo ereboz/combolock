@@ -6954,19 +6954,18 @@ body {
   }
 }
 .banner-message span {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   color: #444f45;
   text-align: center;
   text-shadow: 1px 1px 1px #b5b5b5;
 }
 .banner-message span:nth-child(2) {
-  font-size: 16px;
+  font-size: 14px;
   text-transform: lowercase;
 }
 .banner-message span:nth-child(3) {
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 .banner-right {
   position: relative;
@@ -7003,9 +7002,6 @@ body {
 }
 .wrapper-subnav .subnavall {
   height: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9dce73), to(#b7db99));
-  background: -webkit-linear-gradient(top, #9dce73, #b7db99);
-  background:      -o-linear-gradient(top, #9dce73, #b7db99);
   background-color: #9dce73;
 }
 .logo {
@@ -7284,7 +7280,7 @@ body {
 }
 @media (min-width: 1200px) {
   #myCarousel .carousel-caption {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    text-shadow: 1px 1px 1px #b5b5b5;
   }
 }
 #myCarousel .carousel-caption h1 {
@@ -7383,6 +7379,8 @@ span.glyphicon.glyphicon-chevron-left {
   border-radius: 5px;
 }
 .product-wrapper.listing {
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
   border: none;
   border-bottom: 2px solid #e0e0e0;
   border-radius: 0;
@@ -8286,6 +8284,8 @@ span.pageHeadingWrap {
   color: #000;
   text-decoration: none;
   background-color: fbfbfb !important;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
   border: 1px solid lightgray;
   border-radius: 2px;
 }

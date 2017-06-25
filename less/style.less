@@ -115,7 +115,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 /* MIXIN'S
 ========================================================================== */
 
-.btn-transparent() {
+.btn-transparent() {                // Popular Models
     display: inline-block;
     border: 1px solid @light-gray5;
     padding: 7px 15px 7px 10px;
@@ -139,7 +139,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
     }
 }
 
-.btn-view-detais() {
+.btn-view-details() {               // Best Sellers
     display: block;
     float: left;
     width: 60%;
@@ -238,8 +238,7 @@ body {
 }
 
 .bg-banner {
-    width: 100%;
-    height: 50px;
+    .size(100%, 50px);
     margin: -5px 0 0 0;
     background-color: @green;
     border-bottom: 1px dashed @light-gray4;
@@ -281,7 +280,7 @@ body {
     margin-top: 15px;
     
     span {
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
         font-weight: 800;
         color: @slate-gray;
@@ -289,13 +288,12 @@ body {
     }
     
     span:nth-child(2) {
-        font-size: 16px;
+        font-size: 14px;
         text-transform: lowercase;
     }
     
     span:nth-child(3) {
-        font-size: 20px;
-        text-transform: uppercase;
+        font-size: 16px;
     }
 }
 
@@ -358,9 +356,9 @@ body {
     .subnavall {
         //margin-bottom: 40px;      not used
         height: 50px;
-        //background-color: @green;
+        background-color: @green;
         //.opacity(0.8);
-        .gradient1(@green, lighten(@green, 10%));
+        
     }
 }
 
@@ -660,7 +658,7 @@ body {
       }
       // just display text shadow for large desktop. doesnt look good at lower levels.
       @media (min-width: @screen-lg-desktop) {
-          text-shadow: 0 1px 2px rgba(0,0,0,.6);
+          .text-shadow();
       }
 
       h1 {
@@ -730,8 +728,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
     .box-shadow(2px 2px 5px @gray-light);
 
     @media (max-width: @screen-xs) {
-        width: 65%;
-        height: auto;
+        .size(65%, auto);
     }
 }
 
@@ -758,13 +755,12 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 // Product Slider - product (slides)
 .product-wrapper {
     border: 1px solid @light-gray1;
-    //border-radius: 5px;
     .border-radius();
     background: @white;
 
     &.listing {
         border: none;
-        border-radius: 0;
+        .border-radius(0);
         border-bottom: 2px solid @light-gray1;
 
         &:hover {
@@ -808,8 +804,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
     .product-image {
         margin: 0 auto;
-        width: 166px;
-        height: 166px;
+        .size(166px, 166px);
       }
 
     .product-sale {
@@ -938,8 +933,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
     .prices {
         position: relative;
         float: left;
-        width: 40%;
-        height: 45px;
+        .size(40%, 45px);
         border-right: 1px solid @light-gray1;
         padding: 5px;
 
@@ -953,12 +947,11 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
     }
     
     .details a.view-details {
-        .btn-view-detais();
+        .btn-view-details();
         display: block;
         position: relative;
         float: left;
-        width: 60%;
-        height: 45px;
+        .size(60%, 45px);
     }
     
     .saleOnly {
@@ -1725,10 +1718,8 @@ span.pageHeadingWrap {
         color: #000;
         background-color: @white-off !important;
         text-decoration: none;
-        
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
+    
+        .border-radius(2px);
         
         &.currentpage {
             background-color: @blue !important;
