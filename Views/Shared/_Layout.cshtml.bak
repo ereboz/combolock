@@ -3,7 +3,7 @@
 <head>
     @Html.Partial("_Head")
 </head>
-<!--Created by javaBoxer on 3/23/2017.-->
+<!--Created by javaBoxer on 6/26/2017.-->
 <body>
 @Html.Partial("_BodyOpen")
 <!--START BLUE BANNER AT TOP-->
@@ -11,15 +11,17 @@
     <div class="container" id="banner">
         <div class="wrapper-banner">
             <div class="row">
-                <div class="col-md-3 col-sm-3 banner-phone">
+                <div class="banner-phone">                              <!-- col's defined in less -->
                     <span class="glyphicon glyphicon-phone-alt phone-icon"></span>
                     <span class="banner-phone-text">Call us 1.800.778.2217</span><br>
                     <span class="free-shipping">FREE shipping on orders over $30.00</span>
                 </div>
-                <div class="col-md-5 col-sm-9 banner-message">
-                    <span>Serving people and businesses since 1971</span>
+                <div class="banner-message">                            <!-- col's defined in less -->
+                    <span>Serving People </span>
+                    <span>and </span>
+                    <span>Businesses Since 1971</span>
                 </div>
-                <div class="col-md-4 hidden-sm banner-right">
+                <div class="banner-right hidden-sm">                    <!-- col's defined in less -->
                     <div class="chat">
                         <a id="LivechatButtonx" href="https://chat.livechatinc.net/licence/1032405/open_chat.cgi?lang=en&amp;groups=0" target="chat_1032405_chat.livechatinc.net" onclick="window.open('https://chat.livechatinc.net/licence/1032405/open_chat.cgi?lang=en&amp;groups=0&amp;'+'dc='+escape(document.cookie+';l='+document.location+';r='+document.referer+';s='+typeof lc_session),'Czat_1032405','width=530,height=520,resizable=yes,scrollbars=no,status=1');return false;"><img src="https://chat.livechatinc.net/licence/1032405/button.cgi?lang=en&amp;groups=0&amp;d=1475094635553" style="border: 0px;"></a>
                     </div>
@@ -37,19 +39,24 @@
 <div class="navbar navbar-static-top" role="navigation" id="topnavbar">
     <div class="container-fluid wrapper-subnav">
         <div class="row subnavall">
-            <div class="col-md-6 col-sm-6 col-xs-12 logo-domain">
-                <div class="logo"><a href="/"><img src="/skins/skin_10/dist/images/logo.png"></a></div>
+            <div class="subnav-elements">                               <!-- col's defined in less -->
+                <div class="logo">
+                    <span class="fa fa-lock"></span>
+                    <!--<a href="http://a2zhardware.com"><img src="dist/images/logo.png"></a>-->
+                </div>
                 <div class="subnav-left">
-                    <a class="home" href="/"><span>Keyed</span>
-                        <span>alike.com</span></a>
+                    <a class="home" href="/">
+                        <span>COMBO</span>
+                        <span>lock.com</span>
+                    </a>
                     <div class="logo-vendors hidden-xs hidden-sm hidden-md">
-                        <img src="/skins/skin_10/images/ML_logo_wht.jpg" />
-                        <img src="/skins/skin_10/dist/images/logo-american-lock.png" />
+                        <!--<img src="/skins/skin_10/dist/images/ML_logo_wht.jpg" />-->
+                        <!--<img src="/skins/skin_10/dist/images/logo-american-lock.png" />-->
                     </div>
                 </div>
             </div>
-            <!--<div class="col-md-2 hidden-sm hidden-xs" style="text-align:center; line-height:50px;"><img src="/skins/skin_10/images/ML_logo_wht.jpg" /></div>-->
-            <div class="col-md-4 col-sm-6 hidden-xs search-wrapper">
+
+            <div class="search-wrapper hidden-xs">                      <!-- col's defined in less -->
                 <div class="search">
                     <div class="search">
                         <!--ASP.NET inserts this div. made a class in style.less to handle it-->
@@ -62,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 hidden-sm hidden-xs subnav-wrapper">
+            <div class="subnav-wrapper hidden-xs hidden-sm">            <!-- col's defined in less -->
                 <div class="sub-nav">
                     <ul class="nav navbar-nav">
                         <li>
@@ -88,7 +95,7 @@
 
         <!--START MAIN NAV-->
         <nav class="navbar navbar-default main-nav">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -152,8 +159,8 @@
 
                 <div class="padlock-pros">
                     <a href="http://keyedalike.com">
-                        <img class="logo img-responsive" src="/skins/skin_10/dist/images/logo-padlock-pros.png"/>
-                        <div class="logo-link-text"><a href="http://keyedalike.com">KeyedAlike.com</a></div>
+                        <img class="logo img-responsive" src="/skins/skin_19/dist/images/logo-padlock-pros.png"/>
+                        <div class="logo-link-text"><a href="http://combolock.com">ComboLock.com</a></div>
                     </a>
                 </div>
                 <div class="contact">
@@ -162,12 +169,12 @@
                     <span>9316 Wheatlands Rd.#C, Santee, CA 92071</span>
                 </div>
                 <div class="logo-affiliates">
-                    <img class="better-business" src="/images/assets/BBB.png" width="125px"/>
+                    <img class="better-business" src="http://combolock.com/images/assets/BBB.png" width="125px"/>
                     <a href="/t-secure.aspx">
-                        <img class="secure" src="/images/assets/HPI_Secure.png" width="125px"/>
+                        <img class="secure" src="http://combolock.com/images/assets/HPI_Secure.png" width="125px"/>
                     </a>
-                    <img class="credit-cards" src="/images/assets/CreditCards.png" width="175px"/>
-                    <img class="paypal" src="/images/assets/Paypal.jpg" width="75px"/>
+                    <img class="credit-cards" src="http://combolock.com/images/assets/CreditCards.png" width="175px"/>
+                    <img class="paypal" src="http://combolock.com/images/assets/Paypal.jpg" width="75px"/>
                 </div>
                 <div class="copy">
                     <p>Copyright © 1997-2017 - Hodge Products, Inc.</p><span>All rights reserved.</span>
