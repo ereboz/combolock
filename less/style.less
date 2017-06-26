@@ -63,19 +63,16 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 @white: #fff;
 
 // combolock colors (banner)
-@green: #7fb155;        // old
 @green: #9dce73;
 @gray-light: #d3d3d3;
-@slate-gray: #444f45;  // not used
+@slate-gray: #444f45;
 @gray-dark: #7b7b7b;
 
 
 @carousel-strip: #eff8fa;
 @light-gray1: #e0e0e0;
-@light-gray4: #dddddd;
 @light-gray2: #f8f8f8;
 @light-gray3: #f3f5f6;
-@light-gray4: #d3d3d3;
 @light-gray5: #e0dcdc;
 @light-gray6: #dedada;
 @gray-superlight: #e8e1e1;
@@ -243,8 +240,9 @@ body {
 .bg-banner {
     .size(100%, 50px);
     margin: -5px 0 0 0;
-    background-color: @green;
-    border-bottom: 1px dashed @light-gray4;
+    background-color: lighten(@gray-light, 12%);
+    //background-color: @green;
+    border-bottom: 1px dashed @gray-light;
     
     
     @media @tablet-max {
@@ -264,6 +262,8 @@ body {
     .make-sm-column(3);     // 768px (min)
     
     margin-top: 8px;
+    color: @slate-gray;
+    
     .phone-icon {
         margin: 0 10px 0 0;
     }
@@ -281,12 +281,13 @@ body {
     .make-md-column(5);     // 992px (min)
     
     margin-top: 15px;
+    color: @slate-gray;
     
     span {
         font-size: 16px;
         text-align: center;
         font-weight: 800;
-        color: @slate-gray;
+        //color: @slate-gray;
         .text-shadow();
     }
     
@@ -306,6 +307,7 @@ body {
     .make-md-column(4);     // 992px (min)
     
     margin-top: 10px;
+    color: @slate-gray;
     
     .chat {
         float: left;
@@ -316,7 +318,6 @@ body {
         margin: 10px 0 0 20px;
         font-family: @font-roboto;
         font-size: 14px;
-        color: @white;
         font-weight: bold;
         font-style: italic;
     }
@@ -1544,7 +1545,7 @@ FOOTER SECTION
 /*  sort by, products per page, paging arrows
 ========================================================================== */
 .pagerArea.topPagerArea, .pagerArea.bottomPagerArea {
-    //border: 1px solid @light-gray4;
+    //border: 1px solid @gray-light;
     margin-bottom: 20px;
     padding: 0;
     min-height: 45px;
@@ -1786,7 +1787,7 @@ td.guidedNavProductCell:hover {
 .guidedNavImageWrap {
     .product-image {
         margin: 0 auto;
-        border: 1px solid @light-gray4;
+        border: 1px solid @gray-light;
         margin-bottom: 5px;
         padding: 3px;
     }
@@ -1874,7 +1875,7 @@ td.guidedNavProductCell:hover {
     padding-right: 10px;
     
     @media @desktop-min {
-        border-right: 1px dashed @light-gray4;
+        border-right: 1px dashed @gray-light;
         border-bottom: none;
     }
 }

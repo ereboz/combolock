@@ -6897,6 +6897,7 @@ body {
   width: 100%;
   height: 50px;
   margin: -5px 0 0 0;
+  background-color: #f2f2f2;
   background-color: #9dce73;
   border-bottom: 1px dashed #d3d3d3;
 }
@@ -6916,6 +6917,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 8px;
+  color: #444f45;
   text-shadow: 1px 1px 1px #b5b5b5;
 }
 @media (min-width: 768px) {
@@ -6940,6 +6942,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 15px;
+  color: #444f45;
 }
 @media (min-width: 768px) {
   .banner-message {
@@ -6956,7 +6959,6 @@ body {
 .banner-message span {
   font-size: 16px;
   font-weight: 800;
-  color: #444f45;
   text-align: center;
   text-shadow: 1px 1px 1px #b5b5b5;
 }
@@ -6973,6 +6975,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
   margin-top: 10px;
+  color: #444f45;
 }
 @media (min-width: 992px) {
   .banner-right {
@@ -6990,7 +6993,6 @@ body {
   font-size: 14px;
   font-style: italic;
   font-weight: bold;
-  color: #fff;
 }
 .affix {
   top: 0;
