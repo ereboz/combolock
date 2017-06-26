@@ -100,12 +100,15 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 @screen-tablet-md-max: 800px;
 
 // Custom Grid Variables
-
+@phone-xxxs-min: ~"(min-width: 320px)";
+@phone-xxs-min: ~"(min-width: 375px)";
 @phone-min: ~"(min-width: 480px)";
 @tablet-min: ~"(min-width: 768px)";
 @desktop-min: ~"(min-width: 992px)";
 @desktop-large-min: ~"(min-width: 1200px)";
 
+@phone-xxxs-max: ~"(max-width: 320px)";
+@phone-xxs-max: ~"(max-width: 375px)";
 @phone-max: ~"(max-width: 480px)";
 @tablet-max: ~"(max-width: 768px)";
 @desktop-max: ~"(max-width: 992px)";
@@ -244,7 +247,7 @@ body {
     border-bottom: 1px dashed @light-gray4;
     
     
-    @media (max-width: @screen-tablet) {
+    @media @tablet-max {
         display: none;
     }
 }
@@ -371,7 +374,7 @@ body {
         margin-right: 10px;
         color: #fff;
         
-        @media (min-width: @screen-phone) {
+        @media @phone-min {
             font-size: 37px;
             margin-right: 10px;
         }
@@ -389,7 +392,7 @@ body {
     margin-left: 5px;
     margin-top: 9px;
     
-    @media (min-width: @screen-phone) {
+    @media @phone-min {
         margin-top: 0;
     }
     
@@ -401,7 +404,7 @@ body {
         color: @slate-gray;
         .text-shadow();
         
-        @media (min-width: @screen-phone) {
+        @media @phone-min {
             font-size: 38px;
         }
         
@@ -414,7 +417,7 @@ body {
         font-family: @font-quicksand !important;
         .text-shadow();
         
-        @media (min-width: @screen-phone) {
+        @media @phone-min {
             font-size: 33px;
         }
 	}
@@ -500,11 +503,11 @@ body {
 		}
 	}
 
-    @media (max-width: @screen-tablet) {
+    @media @tablet-max {
         display: none;
     }
 
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         float: right;
     }
 }
@@ -512,11 +515,11 @@ body {
 .navbar {
     margin-bottom: -45px;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         margin-bottom: 45px;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 20px;
     }
 }
@@ -563,7 +566,7 @@ body {
     font-size: 12px;
     color: @cadetblue;
 
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         font-size: 16px;
     }
 }
@@ -578,7 +581,7 @@ body {
 #myCarousel {
     
     // custom setting for iphone 5 to hide
-    @media (max-width: @screen-xxxs) {
+    @media @phone-xxxs-max {
         display: none;
     }
     
@@ -589,7 +592,7 @@ body {
     .carousel-indicators {
         display: none;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             display: block;
         
             .active {
@@ -608,7 +611,7 @@ body {
           background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
           
           // individual backgrounds per slide (large desktop only)
-          @media (min-width: @screen-lg-desktop) {
+          @media @desktop-large-min {
               
               &.slide1 {
                   background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
@@ -632,7 +635,7 @@ body {
               max-width: 100%;
               height: auto;
         
-              @media (max-width: @screen-tablet) {
+              @media @tablet-max {
                   max-width: 50%;
               }
           }
@@ -648,16 +651,16 @@ body {
       font-family: @font-subnav;
       text-shadow: none;
       
-      @media (min-width: @screen-xs) {  // was @screen-tablet
+      @media @phone-min {
           top: -8%;
       }
     
-      @media (min-width: @screen-desktop) {
+      @media @desktop-min {
           top: 0;
           left: 35%;
       }
       // just display text shadow for large desktop. doesnt look good at lower levels.
-      @media (min-width: @screen-lg-desktop) {
+      @media @desktop-large-min {
           .text-shadow();
       }
 
@@ -667,7 +670,7 @@ body {
           text-align: left;
           margin-bottom: 20px;
 
-          @media (min-width: @screen-xs) {  // was @screen-tablet
+          @media @phone-min {  // was @screen-tablet
 			  font-size: 35px;
           }
       }
@@ -677,7 +680,7 @@ body {
           text-align: left;
           margin: 0;
 
-          @media (min-width: @screen-xs) {  // was @screen-tablet
+          @media @phone-min {  // was @screen-tablet
               font-size: 20px;
               line-height: 30px;
           }
@@ -699,13 +702,13 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
     color: @black;
     margin-top: 115%;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         display: block;
         color: @black;
         margin-top: 100%;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-top: 80%;
     }
 
@@ -727,7 +730,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
     margin: 5px auto;
     .box-shadow(2px 2px 5px @gray-light);
 
-    @media (max-width: @screen-xs) {
+    @media @phone-max {
         .size(65%, auto);
     }
 }
@@ -876,11 +879,11 @@ the others as well. Find a good LES solution
 body > div.container > div:nth-child(7) > div > div:nth-child(3) > div > div.product-desc-wrapper > div > p.prod-models {
     margin-bottom: 15px;
     
-    @media (max-width: @screen-tablet) {
+    @media @tablet-max {
         margin-bottom: 20px;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 56px;
     }
 }
@@ -889,11 +892,11 @@ body > div.container > div:nth-child(7) > div > div:nth-child(3) > div > div.pro
 body > div.container > div:nth-child(7) > div > div:nth-child(4) > div > div.product-desc-wrapper > div > p.prod-models {
     margin-bottom: 15px;
     
-    @media (max-width: @screen-tablet) {
+    @media @tablet-max {
         margin-bottom: 20px;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 56px;
     }
 }
@@ -902,11 +905,11 @@ body > div.container > div:nth-child(7) > div > div:nth-child(4) > div > div.pro
 body > div:nth-child(11) > div > div:nth-child(3) > div > div.product-desc-wrapper > div > p.prod-models {
      margin-bottom: 15px;
     
-     @media (max-width: @screen-tablet) {
+     @media @tablet-max {
          margin-bottom: 20px;
      }
     
-     @media (min-width: @screen-desktop) {
+     @media @desktop-min {
          margin-bottom: 56px;
      }
  }
@@ -915,11 +918,11 @@ body > div:nth-child(11) > div > div:nth-child(3) > div > div.product-desc-wrapp
 body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapper > div > p.prod-models {
     margin-bottom: 15px;
     
-    @media (max-width: @screen-tablet) {
+    @media @tablet-max {
         margin-bottom: 20px;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 56px;
     }
 }
@@ -969,7 +972,7 @@ body > div:nth-child(11) > div > div:nth-child(4) > div > div.product-desc-wrapp
 .prod-plp {
     .make-md-column(12);     // 992px (min)
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         margin-left: -15px;
         padding-right: 0;
     }
@@ -1022,11 +1025,11 @@ popular-items {
         img {
             display: inline-block;
         
-            @media (min-width: @screen-tablet) {
+            @media @tablet-min {
                 max-width: 35px;
             }
         
-            @media (min-width: @screen-desktop) {
+            @media @desktop-min {
                 max-width: 60px;
             }
         }
@@ -1042,12 +1045,12 @@ popular-items {
         word-spacing: 12px;
         letter-spacing: 1px;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             word-spacing: 0;
             letter-spacing: 1px;
         }
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             word-spacing: 6px;
             letter-spacing: 1px;
         }
@@ -1060,11 +1063,11 @@ popular-items {
             word-spacing: 34px;
             font-weight: bold;
             
-            @media (min-width: @screen-tablet) {
+            @media @tablet-min {
                 word-spacing: 3px;
             }
     
-            @media (min-width: @screen-desktop) {
+            @media @desktop-min {
                 word-spacing: 24px;
             }
         }
@@ -1076,11 +1079,11 @@ popular-items {
     
             .price {
                 word-spacing: 40px;
-                @media (min-width: @screen-tablet) {
+                @media @tablet-min {
                     word-spacing: 4px;
                 }
         
-                @media (min-width: @screen-desktop) {
+                @media @desktop-min {
                     word-spacing: 30px;
                 }
             }
@@ -1127,7 +1130,7 @@ FOOTER SECTION
 	color: @white;
     font-family: @font-subnav;
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         width: 400px;
     }
     
@@ -1193,7 +1196,7 @@ FOOTER SECTION
 	&.footer1 {
         margin-bottom: 30px;
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             margin-bottom: 0;
         }
         
@@ -1255,11 +1258,11 @@ FOOTER SECTION
 			margin-bottom: 20px;
 		}
 		
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             margin-top: 13px;
         }
         
-		@media (min-width: @screen-lg-desktop) {
+		@media @desktop-large-min {
 			margin-right: 80px;
 		}
 		
@@ -1282,7 +1285,7 @@ FOOTER SECTION
 	&.footer3 {
 		margin-top: 0;
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             margin-top: 13px;
         }
 		
@@ -1318,7 +1321,7 @@ FOOTER SECTION
     font-size: 17px;
     font-weight: bold;
     
-    @media (min-width: @screen-xs) {
+    @media @phone-min {
         margin-top: -10px;
         font-size: 36px;
         font-weight: 500;
@@ -1329,11 +1332,11 @@ FOOTER SECTION
 .variant-info-wrap .add-to-cart-wrap {
     margin-bottom: 0;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         margin-bottom: 20px;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 40px;
     }
     
@@ -1367,11 +1370,11 @@ FOOTER SECTION
         float: left;
         width: 100%;
     
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 100%;
         }
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             width: 10%;
         }
     }
@@ -1382,11 +1385,11 @@ FOOTER SECTION
         float: left;
         width: 100%;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 100%; // tablet
         }
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             width: 15%; // desktop
         }
     }
@@ -1396,11 +1399,11 @@ FOOTER SECTION
     .size-select {
         float: left;
         width: 100%;
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 100%; // tablet
         }
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             width: 25%; // desktop
         }
     }
@@ -1501,7 +1504,7 @@ FOOTER SECTION
     .guidedNavWrapper {
         display: none;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             display: block;
             width: 23% !important;
         }
@@ -1512,7 +1515,7 @@ FOOTER SECTION
         
         input#GuidedNavigationSearchBox {
             margin-bottom: 0;
-            @media (min-width: @screen-sm) {
+            @media @tablet-min {
                 margin-bottom: 5px;
             }
         }
@@ -1527,7 +1530,7 @@ FOOTER SECTION
     .guidedNavContents {
         width: 100% !important;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 75% !important;
             
             h1 {
@@ -1546,7 +1549,7 @@ FOOTER SECTION
     padding: 0;
     min-height: 45px;
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         margin-bottom: 20px;
     }
 }
@@ -1560,7 +1563,7 @@ FOOTER SECTION
         &:first-child {
             width: 40% !important;
             
-            @media (min-width: @screen-tablet) {
+            @media @tablet-min {
                 width: 60% !important;
                 //margin-top: 10px !important;
             }
@@ -1569,7 +1572,7 @@ FOOTER SECTION
         &:last-child {
             width: 60% !important;
             
-            @media (min-width: @screen-tablet) {
+            @media @tablet-min {
                 width: 40% !important;
             }
         }
@@ -1585,7 +1588,7 @@ FOOTER SECTION
     float: left;
     margin-left: 10px;
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         float: right;
     }
 }
@@ -1595,7 +1598,7 @@ FOOTER SECTION
 select#SelectSortTop {
     //margin-left: 5px;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         margin-left: 0 !important;
     }
 }
@@ -1611,7 +1614,7 @@ div#catSortByTop {
     width: 100%;
     margin-top: 10px;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         width: 40%;
     }
 }
@@ -1628,14 +1631,14 @@ span.pageSizeHeading {
 .pagesize {
     display: none;
     
-    @media (min-width: @screen-tablet) {
+    @media @tablet-min {
         display: block;
         float: left;
         margin: 10px 10px 0 10px;
         width: 38% !important;
     }
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         width: 48% !important;
     }
 }
@@ -1645,7 +1648,7 @@ span.sortbylabel {
     &.productcontrollabel {
         margin-right: 0;
     
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             margin-right: 5px;
         }
     }
@@ -1677,7 +1680,7 @@ span.sortbylabel {
     &.productcontrollabel {
         display: none;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             float: left;
             margin-right: 20px;
             margin-bottom: 0;
@@ -1769,7 +1772,7 @@ td.guidedNavProductCell {
     padding-bottom: 10px;
     padding-top: 30px;
     
-    @media (min-width: @screen-sm) {
+    @media @tablet-min {
         padding-right: 0;
     }
 }
@@ -1870,7 +1873,7 @@ td.guidedNavProductCell:hover {
 .checkout-details {
     padding-right: 10px;
     
-    @media (min-width: @screen-desktop) {
+    @media @desktop-min {
         border-right: 1px dashed @light-gray4;
         border-bottom: none;
     }
@@ -1886,7 +1889,7 @@ except for the last div.
         margin-bottom: 20px;
         
         &:last-child {
-            @media (min-width: @screen-tablet) {
+            @media @tablet-min {
                 border-bottom: none;
             }
         }
@@ -1935,7 +1938,7 @@ h3.checkout-header i.checkout-status{
     // ****** START XS SCREEN ******
     // image was added after build and this is the work-around for xx devices.
     // sorry to break mobile first approach :(
-    @media (max-width: @screen-xs) {
+    @media @phone-max {
         .cart-item {
             &.media {
                 display: flex;
@@ -2005,7 +2008,7 @@ h3.checkout-header i.checkout-status{
         position: relative;
         margin: 5px 0 20px 0;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             display: inline-block;
             position: relative;
             margin-bottom: 0;
@@ -2041,7 +2044,7 @@ h3.checkout-header i.checkout-status{
         .shipping-address-column {
             display: inline-block;
             
-            @media (min-width: @screen-phone) {
+            @media @phone-min {
                 display: block;
             }
         }
@@ -2049,7 +2052,7 @@ h3.checkout-header i.checkout-status{
         .billing-address-column {
             display: inline-block;
             
-            @media (min-width: @screen-phone) {
+            @media @phone-min {
                 display: block;
             }
         }
@@ -2130,10 +2133,10 @@ h3.checkout-header i.checkout-status{
     h1 {
         font-size: 24px;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             font-size: 30px;
         }
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             font-size: 36px;
         }
     }
@@ -2187,10 +2190,10 @@ h3.checkout-header i.checkout-status{
         font-size: 24px;
         margin-bottom: 30px;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             font-size: 30px;
         }
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             font-size: 36px;
         }
     }
@@ -2203,12 +2206,12 @@ h3.checkout-header i.checkout-status{
     .form-label {
         width: 45%;
         
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 35%;
             margin-right: 0;
         }
         
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             width: 35%;
             margin-right: 20px;
             margin-top: 10px;
@@ -2220,11 +2223,11 @@ h3.checkout-header i.checkout-status{
         float: right;
         width: 55%;
     
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             width: 65%;
         }
     
-        @media (min-width: @screen-desktop) {
+        @media @desktop-min {
             width: 60%;
         }
         
@@ -2334,7 +2337,7 @@ p {
     .trade-logos {
         margin-bottom: 20px;
         
-        @media (min-width: @screen-sm) {
+        @media @tablet-min {
             margin-bottom: 70px;
         }
     }
@@ -2352,7 +2355,7 @@ p {
     .wrapper-vendor-logos {
         margin-bottom: 0;
         
-        @media (min-width: @screen-sm) {
+        @media @tablet-min {
             margin-bottom: 20px;
         }
     }
@@ -2365,7 +2368,7 @@ p {
     div:nth-child(2) > div:nth-child(1) {
         margin-top: 0;
         
-        @media (min-width: @screen-sm) {
+        @media @tablet-min {
             margin-top: 45px;
         }
     }
@@ -2374,7 +2377,7 @@ p {
         margin-top: 0;
         margin-bottom: 0;
         
-        @media (min-width: @screen-sm) {
+        @media @tablet-min {
             margin-top: 36px;
         }
         
@@ -2402,7 +2405,7 @@ p {
      > div:nth-child(3) {
         margin-bottom: 20px;
          
-         @media (min-width: @screen-sm) {
+         @media @tablet-min {
              margin-bottom: 50px;
          }
     }
@@ -2482,7 +2485,7 @@ p {
     .phone {
         .entry-feedback-wrapper {
             width: 100%;
-            @media (min-width: @screen-desktop) {
+            @media @desktop-min {
                 width: 31%;
             }
         }
@@ -2678,7 +2681,7 @@ Topic pages for Shipping, Return Policy, Privacy, Terms and Conditions, etc.
         border-top: 1px solid @light-gray1;
         padding-top: 30px;
 
-        @media (min-width: @screen-tablet) {
+        @media @tablet-min {
             float: left;
             clear: none;
             border-left: 1px dotted @gray-med4;
