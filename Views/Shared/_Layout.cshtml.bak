@@ -3,7 +3,7 @@
 <head>
     @Html.Partial("_Head")
 </head>
-<!--Created by javaBoxer on 6/26/2017.-->
+<!--Created by javaBoxer on 6/26/2017 -->
 <body>
 @Html.Partial("_BodyOpen")
 <!--START BLUE BANNER AT TOP-->
@@ -50,8 +50,8 @@
                         <span>lock.com</span>
                     </a>
                     <div class="logo-vendors hidden-xs hidden-sm hidden-md">
-                        <!--<img src="/skins/skin_10/dist/images/ML_logo_wht.jpg" />-->
-                        <!--<img src="/skins/skin_10/dist/images/logo-american-lock.png" />-->
+                        <!--<img src="/skins/skin_19/dist/images/ML_logo_wht.jpg" />-->
+                        <!--<img src="/skins/skin_19/dist/images/logo-american-lock.png" />-->
                     </div>
                 </div>
             </div>
@@ -107,13 +107,22 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="@Url.BuildEntityLink("Category", 2, "Laminated Steel Padlocks")">Laminated Steel</a></li>                      <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category", 8, "Laminated Brass Padlocks")">Laminated Brass</a></li>                      <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category", 14, "Solid Brass Padlocks")">Solid Brass</a></li>                             <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category", 15, "Solid Steel Padlocks")">Solid Steel</a></li>                             <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category", 4, "Solid Aluminum Padlocks")">Solid Aluminum</a></li>                        <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category",9, "Weather Resistant Padlocks")">Weather Resistant</a></li>                   <!--Category Link to Products-->
-                            <li><a href="@Url.BuildEntityLink("Category",10, "Warded Padlocks")">Warded Padlocks</a></li>                               <!--Category Link to Products-->
+                            @*<li><a href="@Url.BuildEntityLink("Category", 2, "Laminated Steel Padlocks")">Laminated Steel</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category", 8, "Laminated Brass Padlocks")">Laminated Brass</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category", 14, "Solid Brass Padlocks")">Solid Brass</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category", 15, "Solid Steel Padlocks")">Solid Steel</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category", 4, "Solid Aluminum Padlocks")">Solid Aluminum</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category",9, "Weather Resistant Padlocks")">Weather Resistant</a></li>
+                            <li><a href="@Url.BuildEntityLink("Category",10, "Warded Padlocks")">Warded Padlocks</a></li>*@
+
+                            <li><a href="#">Laminated Steel</a></li>
+                            <li><a href="#">Laminated Brass</a></li>
+                            <li><a href="#">Solid Brass</a></li>
+                            <li><a href="#">Solid Steel</a></li>
+                            <li><a href="#">Solid Aluminum</a></li>
+                            <li><a href="#">Weather Resistant</a></li>
+                            <li><a href="#">Warded Padlocks</a></li>
+
                         </ul>
                         <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg">
                             <li>
