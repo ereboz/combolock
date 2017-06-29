@@ -53,6 +53,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 
 @font-nunito: 'Nunito Sans', sans-serif;
 @font-quicksand: 'Quicksand', sans-serif;
+@palindrome: 'Palindrome Regular',  sans-serif;
 
 @gray-background: #f5f7f9;
 @white: #fff;
@@ -370,7 +371,7 @@ body {
 
 .logo {
     float: left;
-    margin-top: 5px;
+    margin-top: 2px;
     
     span.fa.fa-lock {
         font-size: 40px;
@@ -397,31 +398,33 @@ body {
 .subnav-left {
     float: left;
     margin-left: 5px;
-    margin-top: 9px;
+    margin-top: 8px;
     
     @media @phone-min {
-        margin-top: 0;
+        margin-top: 3px;
     }
     
 	
 	span:first-of-type {
         font-size: 30px;
-		font-weight: 800;
-        font-family: @font-nunito !important;
+		font-weight: 400;
+        font-family: @palindrome !important;
         color: @slate-gray;
+        text-transform: uppercase;
         .text-shadow();
         
         @media @phone-min {
-            font-size: 38px;
+            font-size: 33px;
         }
         
 	}
 	
 	span:last-of-type {
         margin-right: 5px;
-        font-size: 25px;
+        font-size: 30px;
 		font-weight: 400;
-        font-family: @font-quicksand !important;
+        font-family: @palindrome !important;
+        text-transform: uppercase;
         .text-shadow();
         
         @media @phone-min {

@@ -7008,7 +7008,7 @@ body {
 }
 .logo {
   float: left;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 .logo span.fa.fa-lock {
   margin-right: 10px;
@@ -7037,32 +7037,34 @@ body {
 }
 .subnav-left {
   float: left;
-  margin-top: 9px;
+  margin-top: 8px;
   margin-left: 5px;
 }
 @media (min-width: 480px) {
   .subnav-left {
-    margin-top: 0;
+    margin-top: 3px;
   }
 }
 .subnav-left span:first-of-type {
-  font-family: 'Nunito Sans', sans-serif !important;
+  font-family: 'Palindrome Regular', sans-serif !important;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 400;
   color: #444f45;
   text-shadow: 1px 1px 1px #b5b5b5;
+  text-transform: uppercase;
 }
 @media (min-width: 480px) {
   .subnav-left span:first-of-type {
-    font-size: 38px;
+    font-size: 33px;
   }
 }
 .subnav-left span:last-of-type {
   margin-right: 5px;
-  font-family: 'Quicksand', sans-serif !important;
-  font-size: 25px;
+  font-family: 'Palindrome Regular', sans-serif !important;
+  font-size: 30px;
   font-weight: 400;
   text-shadow: 1px 1px 1px #b5b5b5;
+  text-transform: uppercase;
 }
 @media (min-width: 480px) {
   .subnav-left span:last-of-type {
