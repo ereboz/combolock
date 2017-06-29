@@ -413,6 +413,11 @@ body {
         text-transform: uppercase;
         .text-shadow();
         
+        // special case to handle. 320px max (iphone 5)
+        @media @phone-xxxs-max {
+            font-size: 26px;
+        }
+        
         @media @phone-min {
             font-size: 33px;
         }
@@ -426,6 +431,11 @@ body {
         font-family: @palindrome !important;
         text-transform: uppercase;
         .text-shadow();
+        
+        // special case to handle. 320px max (iphone 5)
+        @media @phone-xxxs-max {
+            font-size: 26px;
+        }
         
         @media @phone-min {
             font-size: 33px;
@@ -577,6 +587,23 @@ body {
         text-transform: uppercase;
     }
 }
+
+// bootsrrap override
+.navbar-default .navbar-brand {
+    color: @white;
+}
+
+// bootsrrap override
+.navbar-default .navbar-collapse {
+    border-color: @gray-dark;
+}
+
+
+// bootsrrap override
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: @white;
+}
+
 
 .banner-text {
     margin-bottom: 10px;

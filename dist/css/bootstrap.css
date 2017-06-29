@@ -7053,6 +7053,11 @@ body {
   text-shadow: 1px 1px 1px #b5b5b5;
   text-transform: uppercase;
 }
+@media (max-width: 320px) {
+  .subnav-left span:first-of-type {
+    font-size: 26px;
+  }
+}
 @media (min-width: 480px) {
   .subnav-left span:first-of-type {
     font-size: 33px;
@@ -7065,6 +7070,11 @@ body {
   font-weight: 400;
   text-shadow: 1px 1px 1px #b5b5b5;
   text-transform: uppercase;
+}
+@media (max-width: 320px) {
+  .subnav-left span:last-of-type {
+    font-size: 26px;
+  }
 }
 @media (min-width: 480px) {
   .subnav-left span:last-of-type {
@@ -7205,6 +7215,15 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default .navbar-collapse {
+  border-color: #7b7b7b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
 }
 .banner-text {
   margin-bottom: 10px;
