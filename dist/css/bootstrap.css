@@ -7010,16 +7010,8 @@ body {
   float: left;
   margin-top: 2px;
 }
-.logo span.fa.fa-lock {
-  margin-right: 10px;
-  font-size: 40px;
-  color: #fff;
-}
-@media (min-width: 480px) {
-  .logo span.fa.fa-lock {
-    margin-right: 10px;
-    font-size: 37px;
-  }
+.logo img {
+  max-height: 46px;
 }
 .subnav-elements {
   position: relative;
@@ -7045,6 +7037,9 @@ body {
     margin-top: 3px;
   }
 }
+.subnav-left a:link {
+  text-decoration: none;
+}
 .subnav-left span:first-of-type {
   font-family: 'Palindrome Regular', sans-serif;
   font-size: 30px;
@@ -7068,8 +7063,12 @@ body {
   font-family: 'Palindrome Regular', sans-serif;
   font-size: 30px;
   font-weight: 400;
+  color: #fff;
   text-shadow: 1px 1px 2px #7b7b7b;
   text-transform: uppercase;
+}
+.subnav-left span:last-of-type:hover {
+  color: #444f45;
 }
 @media (max-width: 320px) {
   .subnav-left span:last-of-type {
@@ -7080,19 +7079,6 @@ body {
   .subnav-left span:last-of-type {
     font-size: 33px;
   }
-}
-.subnav-left a:link {
-  color: #fff;
-  text-decoration: none;
-}
-.subnav-left a:hover {
-  color: #444f45;
-}
-.subnav-left a:visited {
-  color: #fff;
-}
-.subnav-left a:active {
-  color: #fff;
 }
 .subnav-left .logo-vendors {
   float: right;
@@ -7146,6 +7132,9 @@ body {
   font-family: 'Quicksand', sans-serif;
   border-left: 1px dotted #fff;
 }
+.sub-nav li:hover {
+  background-color: #69a239;
+}
 .sub-nav li a {
   font-weight: 700;
 }
@@ -7161,14 +7150,11 @@ body {
 }
 .sub-nav li a:visited {
   font-weight: 700;
-  color: #e0e0e0;
+  color: #fff;
 }
 .sub-nav li a:active {
   font-weight: 700;
   color: #fff;
-}
-.sub-nav li:hover {
-  background-color: #88c355;
 }
 @media (max-width: 768px) {
   .sub-nav {

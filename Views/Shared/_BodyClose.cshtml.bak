@@ -32,11 +32,9 @@
         "~/scripts/validate.requireChecked.js",
         "~/scripts/whatsthis.js",
         "~/scripts/modalEvent.js",
-        "~/scripts/imageviewer.js",
-        "~/scripts/guidednavigation.js",
-        "~/scripts/dropsearch.js",
-        //Url.AppRelativeSkinUrl("scripts/keying-option-hider.js"),
-        //Url.AppRelativeSkinUrl("scripts/change-product-names.js"),
+        Url.AppRelativeSkinUrl("scripts/keying-option-hider.js"),
+        Url.AppRelativeSkinUrl("scripts/change-product-names.js"),
+        //Url.AppRelativeSkinUrl("scripts/category-name-adder.js"),
     }
 )
 

@@ -373,20 +373,8 @@ body {
     float: left;
     margin-top: 2px;
     
-    span.fa.fa-lock {
-        font-size: 40px;
-        margin-right: 10px;
-        color: #fff;
-        
-        @media @phone-min {
-            font-size: 37px;
-            margin-right: 10px;
-        }
-    }
-    
     img {
-        //.size(55px, 34px);
-
+        max-height: 46px;
     }
 }
 
@@ -404,7 +392,12 @@ body {
         margin-top: 3px;
     }
     
-	
+    a {
+        &:link {
+            text-decoration: none;
+        }
+    }
+    
 	span:first-of-type {
         font-size: 30px;
 		font-weight: 400;
@@ -421,7 +414,6 @@ body {
         @media @phone-min {
             font-size: 33px;
         }
-        
 	}
 	
 	span:last-of-type {
@@ -429,8 +421,13 @@ body {
         font-size: 30px;
 		font-weight: 400;
         font-family: @font-palindrome;
+        color: @white;
         text-transform: uppercase;
         .text-shadow(1px, 1px, 2px, @gray-dark);
+        
+        &:hover {
+            color: @slate-gray;
+        }
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
@@ -441,22 +438,6 @@ body {
             font-size: 33px;
         }
 	}
-
-		a {
-			&:link {
-				color: @white;
-				text-decoration: none;
-			}
-			&:hover {
-				color: @slate-gray;
-			}
-			&:visited {
-				color: @white;
-			}
-			&:active {
-				color: @white;
-			}
-		}
     
     .logo-vendors {
         float: right;
@@ -466,10 +447,6 @@ body {
         img {
             float: left;
         }
-    }
-    
-    .home {
-    
     }
 }
 
@@ -504,7 +481,13 @@ body {
     font-size: 12px;
 
 	li {
+        border-left: 1px dotted @white;
 		font-family: @font-quicksand;
+        
+        &:hover {
+            background-color: darken(@green, 20%);
+        }
+        
 		a {
             font-weight: 700;
             
@@ -520,19 +503,13 @@ body {
 			}
 			&:visited {
                 font-weight: 700;
-                color: lighten(@gray-light, 5%);
+                color: @white;
 			}
 			&:active {
                 font-weight: 700;
                 color: @white;
 			}
 		}
-        
-        border-left: 1px dotted @white;
-        
-        &:hover {
-            background-color: darken(@green, 8%);
-        }
 	}
 
     @media @tablet-max {
