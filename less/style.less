@@ -53,7 +53,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 
 @font-nunito: 'Nunito Sans', sans-serif;
 @font-quicksand: 'Quicksand', sans-serif;
-@palindrome: 'Palindrome Regular',  sans-serif;
+@font-palindrome: 'Palindrome Regular',  sans-serif;
 
 @gray-background: #f5f7f9;
 @white: #fff;
@@ -260,7 +260,7 @@ body {
 }
 
 .banner-phone {
-    .text-shadow();
+    .text-shadow(1px, 1px, 1px, @gray-light);
     .make-sm-column(3);     // 768px (min)
     
     margin-top: 8px;
@@ -290,7 +290,7 @@ body {
         text-align: center;
         font-weight: 800;
         //color: @slate-gray;
-        .text-shadow();
+        .text-shadow(1px, 1px, 1px, @gray-light);
     }
     
     span:nth-child(2) {
@@ -408,10 +408,10 @@ body {
 	span:first-of-type {
         font-size: 30px;
 		font-weight: 400;
-        font-family: @palindrome !important;
+        font-family: @font-palindrome;
         color: @slate-gray;
         text-transform: uppercase;
-        .text-shadow();
+        .text-shadow(1px, 1px, 2px, @gray-dark);
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
@@ -428,9 +428,9 @@ body {
         margin-right: 5px;
         font-size: 30px;
 		font-weight: 400;
-        font-family: @palindrome !important;
+        font-family: @font-palindrome;
         text-transform: uppercase;
-        .text-shadow();
+        .text-shadow(1px, 1px, 2px, @gray-dark);
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
@@ -491,7 +491,7 @@ body {
 	}
 }
 // end server side generated
-// todo-bh: last make col conversion
+
 .subnav-wrapper {
     
     .make-md-column(3);     // 992px (min)
@@ -529,6 +529,10 @@ body {
 		}
         
         border-left: 1px dotted @white;
+        
+        &:hover {
+            background-color: darken(@green, 8%);
+        }
 	}
 
     @media @tablet-max {
@@ -560,12 +564,12 @@ body {
     
     li {
         &:hover {
-            background-color: @gray-dark;
+            background-color: darken(@gray-dark, 8%);
+            border-left: 1px dashed @white;
+            border-right: 1px dashed @white;
             
             a {
                 color: @white;
-                border-left: 1px dashed @white;
-                border-right: 1px dashed @white;
             }
         }
         
@@ -573,7 +577,6 @@ body {
             color: @white !important;
         }
     }
-    
 }
 
 #myNavbar {
@@ -585,6 +588,10 @@ body {
         font-family: @font-quicksand;
         font-weight: 300;
         text-transform: uppercase;
+    }
+    // target the ul with text to main sections and move up so border hover action is even vertically.
+    .navbar-nav:first-child {
+        margin-top: -4px;
     }
 }
 
@@ -1571,6 +1578,22 @@ FOOTER SECTION
 /* Main page wrapper, wrapping h1, pagination and product
 ========================================================================== */
 
+// this is the first element inside the container and before the filter and main product elements
+// Description in the CMS puts a <p> by default. Just need a little space between this element and title.
+
+.container {
+    .entityDescriptionWrapper {
+        margin-bottom: 0;
+        
+        @media @phone-min {
+            margin-bottom: 20px;
+            border-bottom: 1px dashed lighten(@gray-light, 5%);
+            font-weight: 500;
+        }
+    }
+}
+
+
 .guidedNavTwoCol {
     .guidedNavContents {
         width: 100% !important;
@@ -1927,7 +1950,7 @@ td.guidedNavProductCell:hover {
 /* each section of checkout details - give it a margin and divide section with dotted bottom border
 except for the last div.
  */
-// MAIN COLUMN SELECTOR ON LEFT
+// MAIN COLUMN SELECTOR ON LEFT (inside col-md-8 js-checkout-update-container)
 .checkout-details{
     &> div {
         border-bottom: 1px dashed @gray-superlight;
@@ -1942,7 +1965,7 @@ except for the last div.
 }
 
 /* order details on right */
-// MAIN COLUMN SELECTOR ON RIGHT
+// MAIN COLUMN SELECTOR ON RIGHT (inside col-md-4)
 .order-details {
 
 }
