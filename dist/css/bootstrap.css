@@ -7234,8 +7234,6 @@ body {
 }
 #myCarousel {
   margin-bottom: 25px;
-  background-color: #d3d3d3;
-  border: 1px dotted #7b7a7a;
 }
 @media (max-width: 320px) {
   #myCarousel {
