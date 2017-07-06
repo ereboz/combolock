@@ -7235,7 +7235,7 @@ body {
 #myCarousel {
   margin-bottom: 25px;
 }
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   #myCarousel {
     display: none;
   }
