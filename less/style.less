@@ -633,95 +633,95 @@ body {
         }
     }
 
-  .carousel-inner {
-      // http://localhost:63342/keyeddifferent/dist/images
-      // /skins/skin_10/dist/images
-      .item {
-          // default background for all but desktop large. desktop large has individual images.
-          //background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
-          background-image: url("http://localhost:63342/combolock/dist/images/bg-slide1.jpg");
-          
-          // individual backgrounds per slide (large desktop only)
-          @media @desktop-large-min {
-              
-              &.slide1 {
-                  //background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
-                  background-image: url("http://localhost:63342/combolock/dist/images/bg-slide1.jpg");
-              }
-    
-              &.slide2 {
-                  //background-image: url("/skins/skin_10/dist/images/bg-slide2.jpg");
-                  background-image: url("http://localhost:63342/combolock/dist/images/bg-slide2.jpg");
-              }
-    
-              &.slide3 {
-                  //background-image: url("/skins/skin_10/dist/images/bg-slide3.jpg");
-                  background-image: url("http://localhost:63342/combolock/dist/images/bg-slide3.jpg");
-              }
-    
-              &.slide4 {
-                  //background-image: url("/skins/skin_10/dist/images/bg-slide4.jpg");
-                  background-image: url("http://localhost:63342/combolock/dist/images/bg-slide4.jpg");
-              }
-          }
-    
-          img {
-              display: block;
-              max-width: 100%;
-              height: auto;
-        
-              @media @tablet-max {
-                  max-width: 50%;
-              }
-          }
+  //.carousel-inner {
+  //    // http://localhost:63342/keyeddifferent/dist/images
+  //    // /skins/skin_10/dist/images
+  //    .item {
+  //        // default background for all but desktop large. desktop large has individual images.
+  //        //background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
+  //        background-image: url("http://localhost:63342/combolock/dist/images/bg-slide1.jpg");
+  //
+  //        // individual backgrounds per slide (large desktop only)
+  //        @media @desktop-large-min {
+  //
+  //            &.slide1 {
+  //                //background-image: url("/skins/skin_10/dist/images/bg-slide1.jpg");
+  //                background-image: url("http://localhost:63342/combolock/dist/images/bg-slide1.jpg");
+  //            }
+  //
+  //            &.slide2 {
+  //                //background-image: url("/skins/skin_10/dist/images/bg-slide2.jpg");
+  //                background-image: url("http://localhost:63342/combolock/dist/images/bg-slide2.jpg");
+  //            }
+  //
+  //            &.slide3 {
+  //                //background-image: url("/skins/skin_10/dist/images/bg-slide3.jpg");
+  //                background-image: url("http://localhost:63342/combolock/dist/images/bg-slide3.jpg");
+  //            }
+  //
+  //            &.slide4 {
+  //                //background-image: url("/skins/skin_10/dist/images/bg-slide4.jpg");
+  //                background-image: url("http://localhost:63342/combolock/dist/images/bg-slide4.jpg");
+  //            }
+  //        }
+  //
+  //        img {
+  //            display: block;
+  //            max-width: 100%;
+  //            height: auto;
+  //
+  //            @media @tablet-max {
+  //                max-width: 50%;
+  //            }
+  //        }
+  //
+  //    }
+  //}
 
-      }
-  }
-
-  .carousel-caption {
-      width: 48%;
-      top: -20%;
-      left: 45%;
-      color: @black;
-      font-family: @font-subnav;
-      text-shadow: none;
-      
-      @media @phone-min {
-          top: -8%;
-      }
-    
-      @media @desktop-min {
-          top: 0;
-          left: 35%;
-      }
-      // just display text shadow for large desktop. doesnt look good at lower levels.
-      @media @desktop-large-min {
-          .text-shadow();
-      }
-
-      h1 {
-          color: @blue;
-          font-size: 16px;
-          text-align: left;
-          margin-bottom: 20px;
-
-          @media @phone-min {  // was @screen-tablet
-			  font-size: 35px;
-          }
-      }
-
-      p {
-          font-size: 9px;
-          text-align: left;
-          margin: 0;
-
-          @media @phone-min {  // was @screen-tablet
-              font-size: 20px;
-              line-height: 30px;
-          }
-
-      }
-  }
+  //.carousel-caption {
+  //    width: 48%;
+  //    top: -20%;
+  //    left: 45%;
+  //    color: @black;
+  //    font-family: @font-subnav;
+  //    text-shadow: none;
+  //
+  //    @media @phone-min {
+  //        top: -8%;
+  //    }
+  //
+  //    @media @desktop-min {
+  //        top: 0;
+  //        left: 35%;
+  //    }
+  //    // just display text shadow for large desktop. doesnt look good at lower levels.
+  //    @media @desktop-large-min {
+  //        .text-shadow();
+  //    }
+  //
+  //    h1 {
+  //        color: @blue;
+  //        font-size: 16px;
+  //        text-align: left;
+  //        margin-bottom: 20px;
+  //
+  //        @media @phone-min {  // was @screen-tablet
+	//		  font-size: 35px;
+  //        }
+  //    }
+  //
+  //    p {
+  //        font-size: 9px;
+  //        text-align: left;
+  //        margin: 0;
+  //
+  //        @media @phone-min {  // was @screen-tablet
+  //            font-size: 20px;
+  //            line-height: 30px;
+  //        }
+  //
+  //    }
+  //}
 
 }
 
