@@ -595,20 +595,25 @@ body {
 }
 
 // Carousel
+// mobile: display none, tablet display without controlls and indicators (due to image leaves no room for them) desktop display everything
+
 
 #myCarousel {
-    
-    @media @phone-max {
-        display: none;
-    }
-    
+    display: none;
     margin-bottom: 25px;
+    
+    @media @tablet-min {
+        display: block;
+    }
     
     .carousel-indicators {
         display: none;
         
-        @media @tablet-min {
+        @media @desktop-min {
             display: block;
+            bottom: -2px;
+            left: 65%;
+            width: 30%;
         
             .active {
                 background-color: @gray-medium;
@@ -618,7 +623,30 @@ body {
             }
         }
     }
+    
+    .carousel-control.left, .carousel-control.right {
+        background-image: none;
+    }
+    
+    .carousel-control {
+        display: none;
+        
+        @media @desktop-min {
+            display: block;
+        }
+    }
+    
+    
+    a.left {
+        left: 200px;
+    }
+    
+    a.right {
+        right: 200px;
+    }
+    
 
+    
   //.carousel-inner {
   //    // http://localhost:63342/keyeddifferent/dist/images
   //    // /skins/skin_10/dist/images
@@ -711,9 +739,7 @@ body {
 
 }
 
-.carousel-control.left, .carousel-control.right {
-    background-image: none
-}
+
 
 
 span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
@@ -828,7 +854,7 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
     .product-image {
         margin: 0 auto;
-        .size(166px, 166px);
+        //.size(166px, 166px);
       }
 
     .product-sale {
@@ -994,7 +1020,7 @@ FOOTER SECTION
 		font-size: 35px;
 		font-weight: bold;
 	}
-		
+	
 	&.footer1 {
         margin-bottom: 30px;
         

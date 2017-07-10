@@ -7222,19 +7222,23 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 #myCarousel {
+  display: none;
   margin-bottom: 25px;
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   #myCarousel {
-    display: none;
+    display: block;
   }
 }
 #myCarousel .carousel-indicators {
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #myCarousel .carousel-indicators {
+    bottom: -2px;
+    left: 65%;
     display: block;
+    width: 30%;
   }
   #myCarousel .carousel-indicators .active {
     background-color: #7b7a7a;
@@ -7243,9 +7247,23 @@ body {
     border: 1px solid #7b7a7a;
   }
 }
-.carousel-control.left,
-.carousel-control.right {
+#myCarousel .carousel-control.left,
+#myCarousel .carousel-control.right {
   background-image: none;
+}
+#myCarousel .carousel-control {
+  display: none;
+}
+@media (min-width: 992px) {
+  #myCarousel .carousel-control {
+    display: block;
+  }
+}
+#myCarousel a.left {
+  left: 200px;
+}
+#myCarousel a.right {
+  right: 200px;
 }
 span.glyphicon.glyphicon-chevron-right,
 span.glyphicon.glyphicon-chevron-left {
@@ -7388,8 +7406,6 @@ span.glyphicon.glyphicon-chevron-left {
   background-color: #f8fafb;
 }
 .product-image-bg .product-image {
-  width: 166px;
-  height: 166px;
   margin: 0 auto;
 }
 .product-image-bg .product-sale {
