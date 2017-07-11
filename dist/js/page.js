@@ -75,12 +75,12 @@ $(window).load(function() {
                 item.addClass('active');
             })
     
-            // move .wrapper-category (3 links to sister sites) under the best sellers for (mobile)
-            var bannerSrc = ('.wrapper-category');
-            var bannerDest = ('.product-slider-wrapper')
+            // move .wrapper-category (3 links to keyedalike.com, keyeddifferent.com and matchkey)
+            // under the best sellers for (mobile)
+            var banners = ('.wrapper-category');
+            var bestSellers = ('.product-slider-wrapper')
             
-            $(bannerSrc).detach().appendTo(bannerDest);
-           
+            $(banners).detach().appendTo(bestSellers);
         }
     }
     
