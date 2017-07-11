@@ -7223,7 +7223,7 @@ body {
 }
 #myCarousel {
   display: none;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 @media (min-width: 768px) {
   #myCarousel {
@@ -7235,7 +7235,7 @@ body {
 }
 @media (min-width: 992px) {
   #myCarousel .carousel-indicators {
-    bottom: -2px;
+    bottom: -40px;
     left: 65%;
     display: block;
     width: 30%;
@@ -7256,17 +7256,17 @@ body {
 }
 @media (min-width: 992px) {
   #myCarousel .carousel-control {
-    top: 75%;
+    top: 32%;
     display: block;
   }
 }
 #myCarousel a.left {
-  left: 200px;
+  left: -60px;
   width: 4%;
   height: 5%;
 }
 #myCarousel a.right {
-  right: 200px;
+  right: -60px;
   width: 4%;
   height: 5%;
 }
@@ -7444,6 +7444,11 @@ span.glyphicon.glyphicon-chevron-left {
 }
 .product-image-bg .product-sale.sale-off {
   display: none;
+}
+@media (min-width: 768px) {
+  .product-desc-wrapper {
+    min-height: 36px;
+  }
 }
 .product-desc-wrapper .product-desc {
   margin: 5px 10px;
