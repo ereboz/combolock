@@ -7383,6 +7383,8 @@ span.glyphicon.glyphicon-chevron-left {
 }
 .carousel-inner.best-sellers {
   position: relative;
+  float: left;
+  width: 100%;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
@@ -7395,6 +7397,8 @@ span.glyphicon.glyphicon-chevron-left {
 }
 .carousel-inner.best-sellers .element {
   position: relative;
+  float: left;
+  width: 100%;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;

@@ -1,5 +1,5 @@
 /**
- * Created by javaBoxer on 3/23/2017.
+ * Created by javaBoxer on 7/23/2017.
  */
 
 
@@ -54,6 +54,30 @@ $(document).ready(function(){
 /**
  * Created by javaBoxer on 5/5/2017.
  */
+
+$(window).load(function() {
+    var loc = window.location.href.toLowerCase();
+    var viewportWidth = $(window).width();
+    var pageWrapper = "";
+    
+    
+    // *************** HOME PAGE ***************
+    // if on homepage, and viewport <= 600, find (.best-seller .item) within a .carousel. if not active (2nd item) add
+    // .active class. This will display both rows (all 6 products) for mobilel
+    // test loc = http://localhost:63342/combolock/index.html
+    
+    if (loc.indexOf('combolock') === 23) {
+        pageWrapper = $(".carousel");
+        console.log("Position of combolock is: " + loc.indexOf('combolock'));
+        
+        if (viewportWidth <= 600) {
+            $(pageWrapper).each(function () {
+                var item = $(this).find('.best-sellers .item');
+                item.addClass('active');
+            })
+        }
+    }
+
 // *************** BILL TO/SHIP TO ADDRESS FORM (from checkout page) ***************
 
 // NEED TO MAKE THE ADD NEW SHIPPING, ADD NEW BILLING ADDRESS .container CLASS 50% WIDTH TO REDUCE THE SIZE AND CENTER IT ON SCREEN
@@ -61,13 +85,7 @@ $(document).ready(function(){
 // IT DOES NOT HAVE A UNIQUE CLASS AND SETTING WIDTH ON .container AFFECTS EVERY PAGE ON THE SITE.
 // READ IN THE URL AND APPLY STYLING ONLY TO THE ADDRESS PAGE for SHIPPING/BILLING(address/detail)
 // APPLIES TO:
-// http://a2zhardware.com/address/detail?makePrimary=True&addressType=Shipping&returnurl=%2Fcheckout
-// http://a2zhardware.com/address/detail?makePrimary=True&addressType=Billing&returnurl=%2Fcheckout
-
-$(window).load(function() {
-    var loc = window.location.href.toLowerCase();
-    var viewportWidth = $(window).width();
-    var pageWrapper = "";
+// https://combolock.com/address/detail
     
     if (loc.indexOf('/address/detail') > -1) {
         pageWrapper = $(".create-account-page");
