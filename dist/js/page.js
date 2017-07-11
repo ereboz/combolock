@@ -66,7 +66,8 @@ $(window).load(function() {
     // if on homepage, and viewport <= 600, find (.best-seller .item) within a .carousel. if not active (2nd item) add
     // .active class. This will display both rows (all 6 products) for mobilel
     
-    if (locPath === "/") {
+    // if (locPath != "/") {              // local (there is something in the path)
+    if (locPath === "/") {              // server (nothing in the path)
         pageWrapper = $(".carousel");
         
         if (viewportWidth <= 600) {
@@ -75,7 +76,7 @@ $(window).load(function() {
                 item.addClass('active');
             })
     
-            // move .wrapper-category (3 links to keyedalike.com, keyeddifferent.com and matchkey)
+            // move .wrapper-category (3 links to keyedalike.com, keyeddifferent.com and buildalock.com)
             // under the best sellers for (mobile)
             var banners = ('.wrapper-category');
             var bestSellers = ('.product-slider-wrapper')
