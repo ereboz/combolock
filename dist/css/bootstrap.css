@@ -7409,6 +7409,9 @@ span.glyphicon.glyphicon-chevron-left {
     width: 25%;
   }
 }
+.best-sellers {
+  margin-bottom: 50px;
+}
 .product-image-bg {
   width: 90%;
   margin: 10px auto;

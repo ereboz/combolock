@@ -57,6 +57,7 @@ $(document).ready(function(){
 
 $(window).load(function() {
     var loc = window.location.href.toLowerCase();
+    var locPath = window.location.pathname.toLowerCase();
     var viewportWidth = $(window).width();
     var pageWrapper = "";
     
@@ -64,20 +65,25 @@ $(window).load(function() {
     // *************** HOME PAGE ***************
     // if on homepage, and viewport <= 600, find (.best-seller .item) within a .carousel. if not active (2nd item) add
     // .active class. This will display both rows (all 6 products) for mobilel
-    // test loc = http://localhost:63342/combolock/index.html
     
-    if (loc.indexOf('combolock') === 23) {
+    if (locPath === "/") {
         pageWrapper = $(".carousel");
-        console.log("Position of combolock is: " + loc.indexOf('combolock'));
         
         if (viewportWidth <= 600) {
             $(pageWrapper).each(function () {
                 var item = $(this).find('.best-sellers .item');
                 item.addClass('active');
             })
+    
+            // move .wrapper-category (3 links to sister sites) under the best sellers for (mobile)
+            var bannerSrc = ('.wrapper-category');
+            var bannerDest = ('.product-slider-wrapper')
+            
+            $(bannerSrc).detach().appendTo(bannerDest);
+           
         }
     }
-
+    
 // *************** BILL TO/SHIP TO ADDRESS FORM (from checkout page) ***************
 
 // NEED TO MAKE THE ADD NEW SHIPPING, ADD NEW BILLING ADDRESS .container CLASS 50% WIDTH TO REDUCE THE SIZE AND CENTER IT ON SCREEN
