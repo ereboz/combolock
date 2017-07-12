@@ -631,9 +631,9 @@ body {
     .carousel-indicators {
         display: none;
         
-        @media @desktop-min {
+        @media @tablet-min {
             display: block;
-            bottom: -40px;
+            bottom: -20%;
             left: 65%;
             width: 30%;
         
@@ -644,6 +644,10 @@ body {
                 border: 1px solid @gray-medium;
             }
         }
+        
+        @media @desktop-min {
+            bottom: -10%;
+        }
     }
     
     .carousel-control.left, .carousel-control.right {
@@ -653,23 +657,37 @@ body {
     .carousel-control {
         display: none;
         
-        @media @desktop-min {
+        @media @tablet-min {
             display: block;
+            top: -100%;
+        }
+        
+        @media @desktop-min {
             top: 32%;
         }
     }
     
     
     a.left {
-        left: -60px;
-        width: 4%;
-        height: 5%;
+        left: -10%;
+        
+        @media @desktop-min {
+            left: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
     }
     
     a.right {
-        right: -60px;
-        width: 4%;
-        height: 5%;
+        right: -10%;
+        
+        @media @desktop-min {
+            right: -4%;
+            width: 4%;
+            height: 5%;
+        }
+
     }
     
 
