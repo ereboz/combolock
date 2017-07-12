@@ -7032,6 +7032,16 @@ body {
   margin-top: 8px;
   margin-left: 5px;
 }
+.subnav-left .home {
+  display: inline;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .subnav-left .home {
+    display: inline-block;
+    margin-top: 6px;
+  }
+}
 @media (min-width: 480px) {
   .subnav-left {
     margin-top: 3px;
@@ -7055,7 +7065,7 @@ body {
 }
 @media (min-width: 480px) {
   .subnav-left span:first-of-type {
-    font-size: 33px;
+    font-size: 27px;
   }
 }
 .subnav-left span:last-of-type {
@@ -7077,7 +7087,7 @@ body {
 }
 @media (min-width: 480px) {
   .subnav-left span:last-of-type {
-    font-size: 33px;
+    font-size: 27px;
   }
 }
 .subnav-left .logo-vendors {
@@ -7126,6 +7136,7 @@ body {
   }
 }
 .sub-nav {
+  max-height: 50px;
   font-size: 12px;
 }
 .sub-nav li {

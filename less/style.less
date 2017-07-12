@@ -388,6 +388,16 @@ body {
     margin-left: 5px;
     margin-top: 8px;
     
+    .home {
+        display: inline;
+        margin-top: 0;
+        
+        @media @tablet-min {
+            display: inline-block;
+            margin-top: 6px;
+        }
+    }
+    
     @media @phone-min {
         margin-top: 3px;
     }
@@ -412,7 +422,7 @@ body {
         }
         
         @media @phone-min {
-            font-size: 33px;
+            font-size: 27px;
         }
 	}
 	
@@ -435,7 +445,7 @@ body {
         }
         
         @media @phone-min {
-            font-size: 33px;
+            font-size: 27px;
         }
 	}
     
@@ -479,7 +489,8 @@ body {
 
 .sub-nav {
     font-size: 12px;
-
+    max-height: 50px;
+    
 	li {
         border-left: 1px dotted @white;
 		font-family: @font-quicksand;
