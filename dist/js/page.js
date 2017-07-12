@@ -6,7 +6,6 @@
 $(document).ready(function(){
     
     //// affixes top nav to be sticky
-    
     $(".wrapper-subnav").affix({
         offset: {
             top: $('.bg-banner').height()
@@ -61,8 +60,20 @@ $(window).load(function() {
     var viewportWidth = $(window).width();
     var pageWrapper = "";
     
+    // *************** All MOBILE PAGES ***************
+    
+    // find .search-wrapper (top nav) and wrap it with a new div (.mobile-search-wrapper).
+    // move the search feature out of the top nav and insert between the mobile nav and container for handheld mobile.
+    if (viewportWidth <=600) {
+        $('.search-wrapper').wrap("<div class='mobile-search-wrapper'></div>");
+        var mobileSearch = ('.mobile-search-wrapper');
+        var mobileNav = ('.main-nav');
+        
+        $(mobileSearch).detach().insertAfter(mobileNav);
+    }
     
     // *************** HOME PAGE ***************
+    
     // if on homepage, and viewport <= 600, find (.best-seller .item) within a .carousel. if not active (2nd item) add
     // .active class. This will display both rows (all 6 products) for mobilel
     
@@ -77,11 +88,12 @@ $(window).load(function() {
             })
     
             // move .wrapper-category (3 links to keyedalike.com, keyeddifferent.com and buildalock.com)
-            // under the best sellers for (mobile)
+            // under the best sellers for handheld mobile
             var banners = ('.wrapper-category');
-            var bestSellers = ('.product-slider-wrapper')
+            var bestSellers = ('.product-slider-wrapper');
             
             $(banners).detach().appendTo(bestSellers);
+            
         }
     }
     

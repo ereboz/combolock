@@ -239,6 +239,15 @@ body {
     background-color: @light-gray3;
 }
 
+// *Important* This adds a little space above the notice class on all pages to seperate the notices from search (mobile)
+.notices {
+    margin-top: 45px;
+    
+    @media @tablet-min {
+        margin-top: 0;
+    }
+}
+
 .bg-banner {
     .size(100%, 50px);
     margin: -5px 0 0 0;
@@ -466,6 +475,8 @@ body {
     .make-md-column(3);     // 992px (min)
     
     margin-top: 7px;
+    width: 100%;
+    padding: 0 !important;
 }
 
 // start server side generated
@@ -536,7 +547,7 @@ body {
     margin-bottom: -45px;
     
     @media @tablet-min {
-        margin-bottom: 45px;
+        margin-bottom: 0;
     }
     
     @media @desktop-min {
@@ -809,7 +820,11 @@ span.glyphicon.glyphicon-chevron-right, span.glyphicon.glyphicon-chevron-left {
 
 // Product Slider (Best Sellers Section)
 .product-slider-wrapper {
-    margin-bottom: 50px;
+    margin: 35px 0 50px 0;
+    
+    @media @tablet-min {
+        margin-top: 0;
+    }
 }
 
 .product-slider-head {
