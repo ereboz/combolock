@@ -641,7 +641,13 @@ body {
 
 // bootsrrap override
 .navbar-default .navbar-brand {
-    color: @white;
+    
+    a {
+        &:link {
+            color: @white;
+            text-decoration: none;
+        }
+    }
 }
 
 // bootsrrap override

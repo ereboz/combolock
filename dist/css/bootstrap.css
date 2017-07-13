@@ -7260,8 +7260,9 @@ body {
 #myNavbar .navbar-nav:first-child {
   margin-top: -4px;
 }
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand a:link {
   color: #fff;
+  text-decoration: none;
 }
 .navbar-default .navbar-collapse {
   border-color: #7b7b7b;
