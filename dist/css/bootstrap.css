@@ -6880,6 +6880,13 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 ========================================================================== */
 /* Sub-section: LESS variables for this page: index.html
 ========================================================================== */
+@font-face {
+  font-family: 'mokimono';
+  font-style: normal;
+  font-weight: normal;
+
+  src: url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'), url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff') format('woff'), url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+}
 /* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
 /* MIXIN'S
@@ -7052,14 +7059,14 @@ body {
 }
 @media (min-width: 480px) {
   .subnav-left {
-    margin-top: 3px;
+    margin-top: 7px;
   }
 }
 .subnav-left a:link {
   text-decoration: none;
 }
-.subnav-left span:first-of-type {
-  font-family: 'Quicksand', sans-serif;
+.subnav-left span.combo {
+  font-family: 'mokimono', arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #444f45;
@@ -7067,34 +7074,58 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 320px) {
-  .subnav-left span:first-of-type {
+  .subnav-left span.combo {
     font-size: 26px;
   }
 }
 @media (min-width: 480px) {
-  .subnav-left span:first-of-type {
+  .subnav-left span.combo {
     font-size: 27px;
   }
 }
-.subnav-left span:last-of-type {
-  margin-right: 5px;
-  font-family: 'Quicksand', sans-serif;
+.subnav-left span.lockdotcom {
+  display: inline-block;
+}
+.subnav-left span.lockdotcom:hover {
+  color: #444f45;
+}
+.subnav-left span.lock,
+.subnav-left span.com {
+  font-family: 'mokimono', arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #fff;
   text-shadow: 1px 1px 2px #7b7b7b;
   text-transform: uppercase;
 }
-.subnav-left span:last-of-type:hover {
-  color: #444f45;
-}
 @media (max-width: 320px) {
-  .subnav-left span:last-of-type {
+  .subnav-left span.lock,
+  .subnav-left span.com {
     font-size: 26px;
   }
 }
 @media (min-width: 480px) {
-  .subnav-left span:last-of-type {
+  .subnav-left span.lock,
+  .subnav-left span.com {
+    font-size: 27px;
+  }
+}
+.subnav-left span.dot {
+  font-family: 'mokimono', arial, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 1px 1px 2px #7b7b7b;
+  text-transform: uppercase;
+  letter-spacing: -13px;
+}
+@media (max-width: 320px) {
+  .subnav-left span.dot {
+    font-size: 26px;
+  }
+}
+@media (min-width: 480px) {
+  .subnav-left span.dot {
     font-size: 27px;
   }
 }
