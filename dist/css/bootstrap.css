@@ -7251,6 +7251,15 @@ body {
     display: block;
   }
 }
+#myCarousel.carousel-fade .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+       -o-transition-property: opacity;
+          transition-property: opacity;
+}
+#myCarousel.carousel-fade .active {
+  opacity: 5;
+}
 #myCarousel .carousel-indicators {
   display: none;
 }
