@@ -7044,7 +7044,7 @@ body {
 }
 .subnav-left {
   float: left;
-  margin-top: 8px;
+  margin-top: 5px;
   margin-left: 5px;
 }
 .subnav-left .home {
@@ -7059,7 +7059,7 @@ body {
 }
 @media (min-width: 480px) {
   .subnav-left {
-    margin-top: 7px;
+    margin-top: 10px;
   }
 }
 .subnav-left a:link {
@@ -7067,7 +7067,7 @@ body {
 }
 .subnav-left span.combo {
   font-family: 'mokimono', arial, sans-serif;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 400;
   color: #444f45;
   text-shadow: 1px 1px 2px #7b7b7b;
@@ -7078,9 +7078,9 @@ body {
     font-size: 26px;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 992px) {
   .subnav-left span.combo {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 .subnav-left span.lockdotcom {
@@ -7092,7 +7092,7 @@ body {
 .subnav-left span.lock,
 .subnav-left span.com {
   font-family: 'mokimono', arial, sans-serif;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 400;
   color: #fff;
   text-shadow: 1px 1px 2px #7b7b7b;
@@ -7104,10 +7104,10 @@ body {
     font-size: 26px;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 992px) {
   .subnav-left span.lock,
   .subnav-left span.com {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 .subnav-left span.dot {
@@ -7124,14 +7124,14 @@ body {
     font-size: 26px;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 992px) {
   .subnav-left span.dot {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 .subnav-left .logo-vendors {
   float: right;
-  margin-top: 11px;
+  margin-top: 3px;
   margin-left: 30px;
 }
 .subnav-left .logo-vendors img {
