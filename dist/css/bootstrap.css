@@ -7744,6 +7744,14 @@ FOOTER SECTION
   float: right;
   margin-bottom: 20px;
 }
+.info-footer.footer2 .content-right:last-child {
+  width: auto;
+}
+@media (max-width: 320px) {
+  .info-footer.footer2 .content-right:last-child {
+    width: 137px;
+  }
+}
 @media (min-width: 992px) {
   .info-footer.footer2 {
     margin-top: 13px;

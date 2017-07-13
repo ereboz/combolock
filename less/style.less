@@ -1122,6 +1122,16 @@ FOOTER SECTION
 		.content-right {
 			float: right;
 			margin-bottom: 20px;
+            
+            // fix for 320px to fit in viewport nicely
+            &:last-child {
+                width: auto;
+                
+                @media @phone-xxxs-max {
+                    width: 137px;
+                }
+            }
+            
 		}
 		
         @media @desktop-min {
