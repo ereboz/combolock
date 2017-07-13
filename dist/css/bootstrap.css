@@ -7412,7 +7412,7 @@ span.glyphicon.glyphicon-chevron-left {
   }
 }
 .product-slider-wrapper {
-  margin: 35px 0 50px 0;
+  margin: 35px auto 50px auto;
 }
 @media (min-width: 768px) {
   .product-slider-wrapper {
@@ -7517,6 +7517,8 @@ span.glyphicon.glyphicon-chevron-left {
   background-color: #f8fafb;
 }
 .product-image-bg .product-image {
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 .product-image-bg .product-sale {
