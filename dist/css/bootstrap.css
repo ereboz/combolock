@@ -7059,7 +7059,7 @@ body {
   text-decoration: none;
 }
 .subnav-left span:first-of-type {
-  font-family: 'Palindrome Regular', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #444f45;
@@ -7078,7 +7078,7 @@ body {
 }
 .subnav-left span:last-of-type {
   margin-right: 5px;
-  font-family: 'Palindrome Regular', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 30px;
   font-weight: 400;
   color: #fff;
