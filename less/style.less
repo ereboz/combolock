@@ -429,6 +429,11 @@ body {
     margin-left: 5px;
     margin-top: 5px;
     
+    // special case to handle. 320px max (iphone 5)
+    @media @phone-xxxs-max {
+        margin-top: 15px;
+    }
+    
     .home {
         display: inline;
         margin-top: 0;
@@ -459,7 +464,7 @@ body {
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
-            font-size: 26px;
+            font-size: 18px;
         }
         
         @media @desktop-min {
@@ -486,7 +491,7 @@ body {
         
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
-            font-size: 26px;
+            font-size: 18px;
         }
         
         @media @desktop-min {
@@ -506,7 +511,7 @@ body {
     
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
-            font-size: 26px;
+            font-size: 18px;
         }
     
         @media @desktop-min {

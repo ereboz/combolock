@@ -7054,6 +7054,11 @@ body {
   margin-top: 5px;
   margin-left: 5px;
 }
+@media (max-width: 320px) {
+  .subnav-left {
+    margin-top: 15px;
+  }
+}
 .subnav-left .home {
   display: inline;
   margin-top: 0;
@@ -7082,7 +7087,7 @@ body {
 }
 @media (max-width: 320px) {
   .subnav-left span.combo {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
@@ -7108,7 +7113,7 @@ body {
 @media (max-width: 320px) {
   .subnav-left span.lock,
   .subnav-left span.com {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
@@ -7128,7 +7133,7 @@ body {
 }
 @media (max-width: 320px) {
   .subnav-left span.dot {
-    font-size: 26px;
+    font-size: 18px;
   }
 }
 @media (min-width: 992px) {
