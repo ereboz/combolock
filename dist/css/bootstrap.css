@@ -6885,7 +6885,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
   font-style: normal;
   font-weight: normal;
 
-  src: url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'), url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff') format('woff'), url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+  src: url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'), url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff') format('woff'), url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
 }
 /* DEFINE OUR GLOBAL VARIABLES
 ========================================================================== */
@@ -6942,10 +6942,17 @@ body {
 }
 .banner-phone .phone-icon {
   margin: 0 10px 0 0;
+  font-size: 16px;
 }
 .banner-phone .banner-phone-text {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+}
+.banner-phone .banner-phone-text .phone-text {
+  color: #ca2626;
+}
+.banner-phone .banner-phone-text .phone-number {
+  color: #000;
 }
 .banner-phone .free-shipping {
   text-transform: none;

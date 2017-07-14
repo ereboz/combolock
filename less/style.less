@@ -42,25 +42,25 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 ========================================================================== */
 
 // Custom fonts:ustom fonts:
-@font-face {
-    font-family: 'mokimono';
-    src: url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
-    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
-    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 //@font-face {
 //    font-family: 'mokimono';
-//    src: url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
-//    url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
-//    url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+//    src: url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
+//    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
+//    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
 //    font-weight: normal;
 //    font-style: normal;
 //
 //}
+
+@font-face {
+    font-family: 'mokimono';
+    src: url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
+    url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
+    url('/skins/skin_19/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 /* DEFINE OUR GLOBAL VARIABLES
@@ -89,7 +89,7 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 @gray-light: #d3d3d3;
 @slate-gray: #444f45;
 @gray-dark: #7b7b7b;
-@orange: #ffb812;
+@red: #ca2626;
 
 
 @carousel-strip: #eff8fa;
@@ -298,10 +298,21 @@ body {
     
     .phone-icon {
         margin: 0 10px 0 0;
+        font-size: 16px;
     }
+    
 	.banner-phone-text {
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: bold;
+        
+        .phone-text {
+            color: @red;
+        }
+        
+        .phone-number {
+            color: @black;
+        }
+        
 	}
     .free-shipping {
         text-transform: none;
