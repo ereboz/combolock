@@ -2,6 +2,8 @@
  * Created by javaBoxer on 7/23/2017.
  */
 
+// smooth transition on homepage slider
+$('.carousel').carousel();
 
 $(document).ready(function(){
     
