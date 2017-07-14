@@ -2,10 +2,15 @@
  * Created by javaBoxer on 7/23/2017.
  */
 
-// smooth transition on homepage slider
-$('.carousel').carousel();
+
+
 
 $(document).ready(function(){
+    
+    // smooth transition on homepage slider fade effect. using carousel-fade instead of carousel targets just the
+    // first carousel.
+    $('.carousel-fade').carousel();
+    // end smooth transition on homepage slider fade effect
     
     //// affixes top nav to be sticky
     $(".wrapper-subnav").affix({
