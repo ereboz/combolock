@@ -8264,6 +8264,9 @@ td.guidedNavProductCell:hover {
 ========================================================================== */
 /* globals affecting everything
 ========================================================================== */
+.shopping-cart-page.empty-shopping-cart {
+  margin-bottom: 20px;
+}
 .checkout-page .row .col-md-4 {
   border: 1px solid #dedada;
 }
