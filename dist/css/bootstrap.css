@@ -8488,6 +8488,9 @@ h3.checkout-header i.checkout-status {
     font-size: 36px;
   }
 }
+.create-account-page .has-error {
+  color: #ca2626;
+}
 .addressDesktopWidth {
   width: 70%;
   padding-bottom: 20px;
