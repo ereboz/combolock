@@ -1235,6 +1235,13 @@ FOOTER SECTION
 		
 		.input-group-addon-captchaimage {
 			padding: 0;
+            
+            // special case scenario for <=320px to wrap the captcha image below the text box
+            // in order to display characters that otherwise would be hidden.
+            @media @phone-xxxs-max {
+                display: inline-block;
+            }
+            
 		}
 		
 		.page-action-bar {
@@ -2226,6 +2233,11 @@ h3.checkout-header i.checkout-status{
     
     .input-group-addon-captchaimage {
         padding: 0;
+        
+        @media @phone-xxxs-max {
+            display: inline-block;
+        }
+        
     }
     
 }
