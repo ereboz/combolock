@@ -1284,6 +1284,22 @@ FOOTER SECTION
     .text-box {
         width: 25%;
     }
+    
+    // override .text-option from above.
+    textarea {
+        &#TextOption {
+            width: 62%;
+            
+            @media @tablet-min {
+                width: 48%;
+            }
+            
+            @media @desktop-min {
+                width: 40%;
+            }
+        }
+    }
+    
 }
 
 .variant-info-wrap .variant-price .price-wrap {
@@ -1292,6 +1308,8 @@ FOOTER SECTION
     color: #888;
     font-weight: normal;
 }
+
+
 
 .add-to-cart-group {
     .add-to-cart-quantity {

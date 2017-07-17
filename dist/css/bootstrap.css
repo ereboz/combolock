@@ -7864,6 +7864,19 @@ FOOTER SECTION
 .variant-info-wrap .add-to-cart-wrap .text-box {
   width: 25%;
 }
+.variant-info-wrap .add-to-cart-wrap textarea#TextOption {
+  width: 62%;
+}
+@media (min-width: 768px) {
+  .variant-info-wrap .add-to-cart-wrap textarea#TextOption {
+    width: 48%;
+  }
+}
+@media (min-width: 992px) {
+  .variant-info-wrap .add-to-cart-wrap textarea#TextOption {
+    width: 40%;
+  }
+}
 .variant-info-wrap .variant-price .price-wrap {
   margin-bottom: 10px;
   font-size: 16px;
