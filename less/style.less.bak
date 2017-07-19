@@ -44,9 +44,9 @@ unpolluted with (col-md-4 col-lg-6, etc.)
 // Custom fonts:ustom fonts:
 //@font-face {
 //    font-family: 'mokimono';
-//    src: url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
-//    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
-//    url('http://localhost:63342/combolock/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
+//    src: url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff2') format('woff2'),
+//    url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.woff') format('woff'),
+//    url('http://localhost:63342/keyeddifferent/dist/fonts/Moki-Mono-webfont.svg#mokimono') format('svg');
 //    font-weight: normal;
 //    font-style: normal;
 //
@@ -500,12 +500,12 @@ body {
 	}
     
     span.dot {
-        margin: 0 -16px 0 -4px;
         font-size: 30px;
         font-weight: 800;
         font-family: @font-mokimono;
         color: @white;
         text-transform: uppercase;
+        letter-spacing: -13px;
         .text-shadow(1px, 1px, 2px, @gray-dark);
         
     
