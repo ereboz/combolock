@@ -625,8 +625,11 @@ body {
     li {
         &:hover {
             background-color: darken(@gray-dark, 8%);
-            border-left: 1px dashed @white;
-            border-right: 1px dashed @white;
+            
+            @media @tablet-min {
+                border-left: 1px dashed @white;
+                border-right: 1px dashed @white;
+            }
             
             a {
                 color: @white;
