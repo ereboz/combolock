@@ -7031,6 +7031,12 @@ body {
 .logo {
   float: left;
   margin-top: 2px;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-right: 0;
+  }
 }
 .logo img {
   max-height: 46px;
