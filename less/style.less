@@ -420,18 +420,27 @@ body {
 }
 
 .subnav-elements {
-    .make-xs-column(12);     // 768px (min)
-    .make-sm-column(6);     // 768px (min)
+    .make-xs-column(12);     // 480px (min)
+    .make-sm-column(4);     // 768px (min)
+    .make-md-column(5);
 }
 
 .subnav-left {
-    float: left;
+    float: none;
     margin-left: 5px;
     margin-top: 5px;
     
     // special case to handle. 320px max (iphone 5)
     @media @phone-xxxs-max {
         margin-top: 15px;
+    }
+    
+    @media @phone-min {
+        margin-top: 10px;
+    }
+    
+    @media @tablet-min {
+        margin-top: 13px;
     }
     
     .home {
@@ -442,10 +451,6 @@ body {
             display: inline-block;
             margin-top: 6px;
         }
-    }
-    
-    @media @phone-min {
-        margin-top: 10px;
     }
     
     a {
@@ -465,6 +470,10 @@ body {
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
             font-size: 18px;
+        }
+        
+        @media @tablet-min {
+            font-size: 16px;
         }
         
         @media @desktop-min {
@@ -494,6 +503,10 @@ body {
             font-size: 18px;
         }
         
+        @media @tablet-min {
+            font-size: 15px;
+        }
+        
         @media @desktop-min {
             font-size: 24px;
         }
@@ -512,6 +525,11 @@ body {
         // special case to handle. 320px max (iphone 5)
         @media @phone-xxxs-max {
             font-size: 18px;
+        }
+        
+        @media @tablet-min {
+            margin: 0 -12px 0 -4px;
+            font-size: 15px;
         }
     
         @media @desktop-min {
@@ -532,8 +550,8 @@ body {
 
 .search-wrapper {
     
-    .make-sm-column(6);     // 768px (min)
-    .make-md-column(3);     // 992px (min)
+    .make-sm-column(3);     // 768px (min)
+    .make-md-column(3);
     
     margin-top: 7px;
     width: 100%;
@@ -553,7 +571,8 @@ body {
 
 .subnav-wrapper {
     
-    .make-md-column(3);     // 992px (min)
+    .make-sm-column(5);     // 768px (min)
+    .make-md-column(4);
     
     color: @white;
     height: 30px;
@@ -596,7 +615,7 @@ body {
 	}
 
     @media @tablet-max {
-        display: none;
+        display: block;
     }
 
     @media @desktop-min {
